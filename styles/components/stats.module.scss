@@ -1,0 +1,50 @@
+@import '../core/mixins';
+
+.stats {
+    width:100%;
+    background-image:url('/img/home/statsbg.jpg');
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+
+.stats_wrapper {
+    width:100%;
+    height:rem(300);
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.stats_block {
+    width:25%;
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding:rem(60) rem(20) 0;
+    h4 {
+        color:white;
+        font-size:rem(48);
+        font-weight: 600;
+    }
+
+    p {
+        font-size:rem(24);
+        color:white;
+        text-align: center;
+    }
+
+    &:not(:last-child) {
+        &:after {
+            content:'';
+            width:rem(1);
+            height:80%;
+            position:absolute;
+            top:50%;
+            right:0;
+            transform:translateY(-50%);
+            background-color:rgba(#0F192B,.5);
+        }
+    }
+}

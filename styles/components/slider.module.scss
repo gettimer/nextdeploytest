@@ -1,0 +1,93 @@
+@import '../core/mixins';
+
+.hero {
+  width:100vw;
+  height:100vh;
+  position:relative;
+}
+.number_slide {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+
+  .content_block {
+    width:100vw;
+    height:100vh;
+    position:absolute;
+    left:0;
+    top:0;
+    display:flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding-bottom:rem(200);
+  }
+}
+
+.generic {
+  font-family: 'Gilroy-Bold';
+  color: white;
+  font-size: rem(45);
+  span {
+    display: block;
+    font-size: rem(48);
+    font-family: 'Gilroy-Black';
+    text-decoration: underline;
+  }
+}
+
+.ghost_button {
+  margin-top:rem(30);
+  border:rem(1) solid white;
+  border-radius:rem(50);
+  height:rem(50);
+  color:white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color:white;
+  font-weight:400;
+  text-decoration: none;
+  font-size:rem(14);
+  padding:0 rem(30);
+}
+
+.dots {
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  right:rem(30);
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.slider_img {
+  width:100%;
+}
+
+.dot {
+  border:0;
+  width: rem(6);
+  height: rem(12);
+  background: rgba(white,.5);
+  border-radius: 50%;
+  margin-bottom:rem(5);
+  cursor: pointer;
+  transition:all .2s;
+}
+
+.dot:focus {
+  outline: none;
+}
+
+.dot.active {
+  height:rem(22);
+  border-radius:rem(30);
+  background-color:#F79A42;
+}
+
+.video {
+    width:100vw;
+    min-width: 100vw;
+    min-height: 100vh;
+}

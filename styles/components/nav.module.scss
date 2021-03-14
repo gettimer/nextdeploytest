@@ -1,0 +1,114 @@
+@import '../core/mixins';
+.main_nav {
+    width:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:9;
+    padding:rem(30) 0;
+}
+.nav_wrapper {
+    width:100%;
+    display:flex;
+    align-items:center;
+}
+.nav_logo {
+    height:rem(30)
+}
+
+.nav_list {
+    display:flex;
+    align-items:center;
+    padding-left:rem(25);
+    ul {
+        display: flex;
+        li {
+              a {
+                text-decoration: none;
+                span {
+                    color:white;
+                    font-size:rem(14);
+                    font-family:'Gilroy-Bold';
+                    margin-right:rem(25);
+                }
+            }
+            &.active {
+                    position:relative;
+                    &:after {
+                        content:'';
+                        width:rem(70);
+                        height:rem(65);
+                        left:rem(-10);
+                        top:rem(-10);
+                        position:absolute;
+                        background-color:white;
+                        border-top-right-radius: rem(10);
+                        border-top-left-radius: rem(10);
+                    }
+                    span {
+                        position:relative;
+                        color:#0F192B;
+                        z-index:3;
+                    }
+                }
+        }
+    }
+  
+}
+
+.sub_menu {
+    width:100vw;
+    height:rem(370);
+    background-color:white;
+    position:absolute;
+    left:0;
+    top:100%;
+    margin-top:rem(-10);
+    display: flex;
+}
+
+
+
+.sub_menu_content {
+    padding:rem(25);
+    .sub_menu_title {
+        font-family: 'Gilroy-Bold';
+        font-size: rem(30);
+        display:flex;
+        margin-bottom:rem(15);
+    }
+    .sub_menu_grid {
+        display: flex;
+        align-items: stretch;
+        flex-wrap: wrap;
+        max-width:rem(680);
+
+        .sub_menu_block {
+            width:rem(150);
+            margin-right:rem(20);
+            margin-bottom:rem(20);
+            &:not(:nth-child(4n)) {
+                border-right:rem(1) solid #F1F2F3;
+            }
+            .block_title {
+                display:flex;
+                align-items: center;
+                font-family: 'Gilroy-Bold';
+                font-size: rem(14);
+                margin-bottom:rem(10);
+                img {
+                    margin-right:rem(10);
+                    max-height:rem(20);
+                }
+            }
+            a {
+                display:block;
+                opacity:.7;
+                text-decoration: none;
+                font-size:rem(13);
+                padding-top:rem(3);
+                color:#0F192B;
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+@font-face {
+	font-family: 'Gilroy-Black';
+	src: url('/fonts/Gilroy-Black.eot');
+	src: local('Gilroy Black'), local('Gilroy-Black'),
+		url('/fonts/Gilroy-Black.eot?#iefix') format('embedded-opentype'),
+		url('/fonts/Gilroy-Black.woff') format('woff'),
+		url('/fonts/Gilroy-Black.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Gilroy-Bold';
+	src: url('/fonts/Gilroy-Bold.eot');
+	src: local('Gilroy Bold'), local('Gilroy-Bold'),
+		url('/fonts/Gilroy-Bold.eot?#iefix') format('embedded-opentype'),
+		url('/fonts/Gilroy-Bold.woff') format('woff'),
+		url('/fonts/Gilroy-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');

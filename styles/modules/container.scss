@@ -1,0 +1,12 @@
+.container {
+  width:100%;
+  max-width:rem(1320);
+  margin-left:auto;
+  margin-right:auto;
+}
+
+@media screen and (max-width: 1280px){
+  .container {
+    max-width:rem(1180);
+  }
+}

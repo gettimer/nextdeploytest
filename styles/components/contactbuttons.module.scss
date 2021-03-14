@@ -1,0 +1,41 @@
+@import '../core/mixins';
+.contact_line {
+    margin-left:auto;
+    display:flex;
+    align-items:center;
+}
+
+.call_btn {
+    height:rem(40);
+    border: rem(1) solid white;
+    border-radius: rem(25);
+    margin-right:rem(10);
+    color:white;
+    text-decoration: none;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size:rem(13);
+    padding:0 rem(25);
+    span {
+        font-weight:600;
+        padding-left:rem(3);
+    }
+    img {
+        margin-right:rem(5);
+    }
+}
+
+.support_btn {
+    height:rem(40);
+    border-radius: rem(25);
+    color:white;
+    text-decoration: none;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size:rem(13);
+    padding:0 rem(25);
+    font-weight:600;
+    background-color:#F79A42;
+}

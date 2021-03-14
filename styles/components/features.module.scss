@@ -1,0 +1,39 @@
+@import '../core/mixins';
+.features {
+    width:100%;
+    background-color:rgba(#F1F2F3,.3);
+}
+.features_grid {
+    width:100%;
+    height:rem(420);
+    display: flex;
+    align-items: stretch;
+}
+.feature {
+    width:25%;
+    display:flex;
+    align-items:flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding:rem(90) rem(50) rem(90);
+    &:not(:last-child) {
+        border-right:rem(1) solid rgba(#777B86,.1);
+    }
+    h4 {
+        font-size:rem(24);
+        font-family:'Gilroy-Bold';
+        color:#0F192B;
+        padding:rem(15) 0
+    }
+    p {
+        font-size:rem(14);
+        opacity:.7;
+    }
+    a {
+        margin-top:auto;
+        font-weight:500;
+        font-size:rem(15);
+        color:#0F192B;
+
+    }
+}

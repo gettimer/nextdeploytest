@@ -1,0 +1,18 @@
+@import 'core/mixins';
+@import 'core/reset';
+@import 'core/fonts';
+@import 'modules/container';
+
+html {
+  font-size:16px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight:300;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  background-color:var(--body-bg);
+  color:#0F192B;
+}
