@@ -48,3 +48,24 @@
         }
     }
 }
+
+@media (max-width: 991.98px) { 
+   
+.stats_wrapper {
+    width:100%;
+    height:auto;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-bottom:rem(60);
+}
+
+.stats_block {
+    width:100%;
+    &:not(:last-child) {
+        &:after {
+           display:none;
+        }
+    }
+}
+}

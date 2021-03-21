@@ -117,3 +117,47 @@
   border-radius:rem(30);
   background-color:#F79A42;
 }
+
+@media (max-width: 991.98px) { 
+
+    .title_badge {
+    
+        top:rem(30);
+        left:rem(20);
+    }
+    .testimonials {
+        width:100%;
+        height:auto;
+        &:before {
+            width:100%;
+        } 
+    }
+    .testimonials_image {
+        display:none;
+    }
+    .testimonials_wrapper {
+        align-items:flex-start;
+    }
+    .testimonials_content {
+        width:100%;
+        padding-top:rem(100);
+        padding-left:rem(20);
+        padding-right:rem(20);
+        padding-bottom:rem(40);
+        display:flex;
+        flex-direction:column;
+        position:relative;
+    }
+    .testimonials_view {
+        width:100%;
+        height:100%;
+            p {
+                font-size:rem(14);
+            }
+        }
+        .dots {
+  
+        justify-content: flex-start;
+        bottom:rem(-35);
+        }
+}

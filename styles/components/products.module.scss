@@ -89,3 +89,31 @@
         top:rem(30);
     }
 }
+
+@media (max-width: 991.98px) { 
+    .products {
+        width:100%;
+        height:auto;
+    }
+    .product_wrapper {
+        padding:0 rem(30);
+        padding-top:rem(190);
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    .product_block {
+        width:100%;
+        margin-bottom:rem(20);
+    }
+    .product_box {
+    
+        &_totop {
+            top:0;
+        }
+        &_tobottom {
+            top:0;
+        }
+    }
+}

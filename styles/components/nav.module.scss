@@ -1,19 +1,24 @@
 @import '../core/mixins';
 .main_nav {
     width:100%;
-    position:absolute;
+    position:fixed;
     top:0;
     left:0;
-    z-index:9;
+    z-index:11;
     padding:rem(30) 0;
+    transition:all .3s;
+    &_fix {
+        background-color:rgba(#0F192B,.9);
+    }
 }
 .nav_wrapper {
     width:100%;
     display:flex;
     align-items:center;
+    padding:0 rem(30);
 }
 .nav_logo {
-    height:rem(30)
+    height:rem(30);
 }
 
 .nav_list {
@@ -25,6 +30,7 @@
         li {
               a {
                 text-decoration: none;
+                cursor:pointer;
                 span {
                     color:white;
                     font-size:rem(14);
@@ -56,9 +62,11 @@
   
 }
 
+
+
 .sub_menu {
     width:100vw;
-    height:rem(370);
+    height:auto;
     background-color:white;
     position:absolute;
     left:0;
@@ -66,9 +74,6 @@
     margin-top:rem(-10);
     display: flex;
 }
-
-
-
 .sub_menu_content {
     padding:rem(25);
     .sub_menu_title {
@@ -80,14 +85,11 @@
     .sub_menu_grid {
         display: flex;
         align-items: stretch;
-        flex-wrap: wrap;
-        max-width:rem(680);
+        max-width:calc(100vw - 400px);
 
         .sub_menu_block {
-            width:rem(150);
-            margin-right:rem(20);
-            margin-bottom:rem(20);
-            &:not(:nth-child(4n)) {
+            padding:0 rem(20);
+            &:not(:last-child) {
                 border-right:rem(1) solid #F1F2F3;
             }
             .block_title {
@@ -96,6 +98,7 @@
                 font-family: 'Gilroy-Bold';
                 font-size: rem(14);
                 margin-bottom:rem(10);
+                margin-top:rem(20);
                 img {
                     margin-right:rem(10);
                     max-height:rem(20);
@@ -108,7 +111,93 @@
                 font-size:rem(13);
                 padding-top:rem(3);
                 color:#0F192B;
+
+                &:hover {
+                    text-decoration: underline;
+                }
             }
+        }
+    }
+}
+
+.toggle_mobile_menu {
+    background-color:transparent;
+    margin-left:auto;
+}
+.push_nav {
+    width:100vw;
+    height:100vh;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:101;
+    visibility:hidden;
+    .push_nav_handler {
+        width:100vw;
+        height:100vh;
+        background-color:rgba(#0F192B,0);
+        transition:all .3s;
+    }
+
+    .push_nav_container {
+        position:absolute;
+        top:0;
+        right:-70%;
+        width:70%;
+        height:100vh;
+        background-color:white;
+        transition:all .3s;
+
+        ul {
+            li {
+                width:100%;
+                padding:rem(10) rem(20);
+                border-bottom:rem(1) solid rgba(#0F192B,.08);
+                a {
+                    font-size:rem(14);
+                    font-weight:500;
+                    font-family: 'Gilroy-Bold';
+                    font-size: rem(14);
+                    color:#0F192B;
+                    text-decoration: none;
+                }
+
+                ul {
+                    li {
+                        border:0 !important;
+                        padding:rem(5) 0;
+
+                        a {
+                            color:rgba(#0F192B,.6);
+                            &[href] {
+                                color:rgba(#0F192B,.8);
+                                    text-decoration: underline;
+                            }
+                        }
+                        ul {
+                            li {
+                                a {
+                                    color:rgba(#0F192B,1);
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+
+
+    &_push {
+        visibility:visible;
+        .push_nav_handler {
+            background-color:rgba(#0F192B,.9);
+        }
+        .push_nav_container {
+            right:0;
         }
     }
 }

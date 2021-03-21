@@ -29,3 +29,12 @@
         }
     }
 }
+
+@media (max-width: 991.98px) { 
+   
+    .social_media_links {
+        width:auto;
+        left:50%;
+        transform:translateX(-50%);
+    }
+}

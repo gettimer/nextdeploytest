@@ -37,3 +37,18 @@
 
     }
 }
+
+@media (max-width: 991.98px) { 
+    .features_grid {
+        height:auto;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .feature {
+        width:100%;
+        padding:rem(20) rem(40);
+        &:not(:last-child) {
+            border-right:0;
+        }
+    }
+}

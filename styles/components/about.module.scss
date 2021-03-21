@@ -88,3 +88,28 @@
     font-size:rem(12);
     font-family: 'Gilroy-Bold';
 }
+
+@media (max-width: 991.98px) { 
+    .about {
+        align-items: flex-start;
+        flex-direction:column;
+        margin:rem(70) 0;
+    }
+    .about_picture_block {
+        width:100%;
+    }
+    .picture_relative {
+        width:90%;
+        left:5%;
+        &:after {
+            left:-5%;
+        }
+    }
+
+    .about_content_block {
+        width:100%;
+        padding:rem(30) rem(30);
+        background-image:none;
+    }
+
+}
