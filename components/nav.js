@@ -69,7 +69,7 @@ export default function Nav() {
                 {!isMobile ?
                     <><nav className={styles.nav_list}>
                         <ul>
-                            <li><a><span>Kurumsal</span></a></li>
+                            <li><Link href='/kurumsal/hakkimizda'><a><span>Kurumsal</span></a></Link></li>
                             <li><a><span>Hizmetler</span></a></li>
                             <li className={subMenu && `${styles.active}`} ref={navi}>
                                 <a onClick={() => setSubMenu(b => !b)} ><span>Ürünler</span></a>
