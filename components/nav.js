@@ -1,6 +1,5 @@
 import React from 'react'
 const { useState, useEffect, useRef, useCallback } = React;
-import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../styles/components/nav.module.scss'
 import ContactButtons from './contactbuttons'
@@ -9,23 +8,27 @@ import { isMobile } from 'react-device-detect';
 export default function Nav() {
 
     const [subMenu, setSubMenu] = useState(false);
-    const [scrollTopOf, setScrollTopOf] = useState(false);
+    const [scr, setScr] = useState(false);
     const [pushNav, setPushNav] = useState(false);
     const [openState, setOpenState] = useState(null);
     const [openSubState, setOpenSubState] = useState(null);
-    const dropdown = useRef(null);
-    const navi = useRef(null);
 
     const handleScroll = useCallback((event) => {
-        let scrollTop = window.scrollY;
-        scrollTop > 10 ? setScrollTopOf(true) : setScrollTopOf(false)
-    });
+        window.scrollY > 10 ? setScr(true) : setScr(false);
+
+    })
+
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
         return () => {
             window.removeEventListener("scroll", handleScroll, false);
         };
     }, []);
+
+
+
+    const dropdown = useRef(null);
+    const navi = useRef(null);
 
 
     useEffect(() => {
@@ -40,9 +43,7 @@ export default function Nav() {
         return () => window.removeEventListener("click", handleClick);
     }, [subMenu]);
 
-
-
-    return (<header className={scrollTopOf ? `${styles.main_nav} ${styles.main_nav_fix}` : `${styles.main_nav}`}>
+    return (<header className={scr ? `${styles.main_nav} ${styles.main_nav_fix}` : `${styles.main_nav}`}>
         <div className='container'>
             <div className={styles.nav_wrapper}>
                 <Link href='/'>
