@@ -17,7 +17,8 @@ export default function Nav() {
     const navi = useRef(null);
 
     const handleScroll = useCallback((event) => {
-        window.scrollY > 10 ? setScrollTopOf(true) : setScrollTopOf(false)
+        let scrollTop = window.scrollY;
+        scrollTop > 10 ? setScrollTopOf(true) : setScrollTopOf(false)
     });
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
@@ -25,6 +26,8 @@ export default function Nav() {
             window.removeEventListener("scroll", handleScroll, false);
         };
     }, []);
+
+
     useEffect(() => {
         if (!subMenu) return;
         function handleClick(event) {
@@ -37,6 +40,8 @@ export default function Nav() {
         return () => window.removeEventListener("click", handleClick);
     }, [subMenu]);
 
+
+
     return (<header className={scrollTopOf ? `${styles.main_nav} ${styles.main_nav_fix}` : `${styles.main_nav}`}>
         <div className='container'>
             <div className={styles.nav_wrapper}>
@@ -48,12 +53,14 @@ export default function Nav() {
                 {!isMobile ?
                     <><nav className={styles.nav_list}>
                         <ul>
-                            <li><Link href=''><a><span>Kurumsal</span></a></Link></li>
-                            <li><Link href=''><a><span>Hizmetler</span></a></Link></li>
+                            <li><a><span>Kurumsal</span></a></li>
+                            <li><a><span>Hizmetler</span></a></li>
                             <li className={subMenu && `${styles.active}`} ref={navi}>
                                 <a onClick={() => setSubMenu(b => !b)} ><span>Ürünler</span></a>
                             </li>
-                            <li><Link href=''><a><span>Çözümler</span></a></Link></li>
+                            <li>
+                                <a><span>Çözümler</span></a>
+                            </li>
                             <li><Link href=''><a><span>Referanslar</span></a></Link></li>
                             <li><Link href=''><a><span>Başarı Hikayeleri</span></a></Link></li>
                             <li><Link href=''><a><span>İletişim</span></a></Link></li >
