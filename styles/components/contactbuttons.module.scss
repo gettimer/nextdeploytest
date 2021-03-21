@@ -38,11 +38,16 @@
     padding:0 rem(25);
     font-weight:600;
     background-color:#F79A42;
+    padding:0 rem(15);
 }
 
 
 @media (max-width: 991.98px) { 
-   
+   .contact_line {
+        justify-content: center;
+        width:100%;
+        margin-left:initial
+    }
    .call_btn {
     
     font-size:rem(10);
@@ -52,6 +57,5 @@
     .support_btn {
         
         font-size:rem(10);
-        padding:0 rem(25);
     }
 }

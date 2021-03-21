@@ -8,6 +8,7 @@ import { isMobile } from 'react-device-detect';
 export default function Nav() {
 
     const [subMenu, setSubMenu] = useState(false);
+    const [subMenuC, setSubMenuC] = useState(false);
     const [scr, setScr] = useState(false);
     const [pushNav, setPushNav] = useState(false);
     const [openState, setOpenState] = useState(null);
@@ -30,6 +31,9 @@ export default function Nav() {
     const dropdown = useRef(null);
     const navi = useRef(null);
 
+    const dropdownC = useRef(null);
+    const naviC = useRef(null);
+
 
     useEffect(() => {
         if (!subMenu) return;
@@ -42,6 +46,17 @@ export default function Nav() {
 
         return () => window.removeEventListener("click", handleClick);
     }, [subMenu]);
+    useEffect(() => {
+        if (!subMenuC) return;
+        function handleClickC(event) {
+            if (dropdownC.current && !dropdownC.current.contains(event.target) && !naviC.current.contains(event.target)) {
+                setSubMenuC(false);
+            }
+        }
+        window.addEventListener("click", handleClickC);
+
+        return () => window.removeEventListener("click", handleClickC);
+    }, [subMenuC]);
 
     return (<header className={scr ? `${styles.main_nav} ${styles.main_nav_fix}` : `${styles.main_nav}`}>
         <div className='container'>
@@ -59,8 +74,8 @@ export default function Nav() {
                             <li className={subMenu && `${styles.active}`} ref={navi}>
                                 <a onClick={() => setSubMenu(b => !b)} ><span>Ürünler</span></a>
                             </li>
-                            <li>
-                                <a><span>Çözümler</span></a>
+                            <li className={subMenuC && `${styles.active}`} ref={naviC}>
+                                <a onClick={() => setSubMenuC(b => !b)} ><span>Çözümler</span></a>
                             </li>
                             <li><Link href=''><a><span>Referanslar</span></a></Link></li>
                             <li><Link href=''><a><span>Başarı Hikayeleri</span></a></Link></li>
@@ -265,6 +280,31 @@ export default function Nav() {
                                 </div>
                                         <Link href=''>
                                             <a>elogo ISG</a>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> : null}
+                        {subMenuC ? <div className={styles.sub_menu} ref={dropdownC}>
+                            <img src='/img/submenu.jpg' />
+                            <div className={styles.sub_menu_content}>
+                                <span className={styles.sub_menu_title}>Çözümler</span>
+                                <div className={styles.sub_menu_grid}>
+                                    <div className={styles.sub_menu_block}>
+                                        <Link href=''>
+                                            <a>Üretim Çözümleri</a>
+                                        </Link>
+                                        <Link href=''>
+                                            <a>Depo Çözümleri</a>
+                                        </Link>
+                                        <Link href=''>
+                                            <a>Saha Satış Çözümleri</a>
+                                        </Link>
+                                        <Link href=''>
+                                            <a>Finansal Çözümler</a>
+                                        </Link>
+                                        <Link href=''>
+                                            <a> E-Ticaret Entegrasyon</a>
                                         </Link>
                                     </div>
                                 </div>
