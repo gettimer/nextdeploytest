@@ -16,6 +16,7 @@
     display:flex;
     align-items:center;
     padding:0 rem(30);
+    position:relative;
 }
 .nav_logo {
     height:rem(30);
@@ -40,7 +41,23 @@
             }
             &.active {
                     position:relative;
+                    span {
+                        color:#F79A42;
+                    }
                     &:after {
+                        content:"";
+                        width: 0; 
+                        height: 0; 
+                        border-left: 10px solid transparent;
+                        border-right: 10px solid transparent;
+                        border-bottom: 10px solid white;
+                        position:absolute;
+                        left:14px;
+                        bottom:rem(-28);
+                        animation-name: example2;
+                        animation-duration: .4s;
+                    }
+                    /*&:after {
                         content:'';
                         width:100%;
                         height:rem(65);
@@ -55,32 +72,67 @@
                         position:relative;
                         color:#0F192B;
                         z-index:3;
-                    }
+                    }*/
                 }
         }
     }
   
 }
 
-
+.nav_layout {
+    width:100vw;
+    height:100vh;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:9;
+    background-color:rgba(#0F192B,.9);
+    animation-name: example;
+    animation-duration: .4s;
+}
 
 .sub_menu {
-    width:100vw;
     height:auto;
     background-color:white;
+    border-radius:rem(10);
     position:absolute;
     left:0;
     top:100%;
-    margin-top:rem(-10);
+    margin-top:rem(20);
     display: flex;
+    width:100%;
+    animation-name: example3;
+    animation-duration: .4s;
+}
+
+@keyframes example {
+  from {opacity: 0; margin-top:rem(30)}
+  to {opacity: 1;margin-top:rem(20);}
+}
+@keyframes example2 {
+  from {opacity: 0; bottom:rem(-38)}
+  to {opacity: 1;bottom:rem(-28);}
+}
+@keyframes example3 {
+  from {opacity: 0; }
+  to {opacity: 1;}
+}
+
+.submenu_image {
+    max-width:rem(270);
+    object-fit: cover;
+    border-top-left-radius: rem(10);
+    border-bottom-left-radius: rem(10);
 }
 .sub_menu_content {
-    padding:rem(25);
+    width:calc(100% - 270px);
+    padding:rem(20) rem(20) rem(20) 0;
     .sub_menu_title {
         font-family: 'Gilroy-Bold';
         font-size: rem(30);
         display:flex;
         margin-bottom:rem(15);
+        padding-left:rem(20)
     }
     .sub_menu_grid {
         display: flex;
@@ -96,19 +148,19 @@
                 display:flex;
                 align-items: center;
                 font-family: 'Gilroy-Bold';
-                font-size: rem(14);
+                font-size: rem(12);
                 margin-bottom:rem(10);
                 margin-top:rem(20);
                 img {
-                    margin-right:rem(10);
-                    max-height:rem(20);
+                    margin-right:rem(5);
+                    max-height:rem(15);
                 }
             }
             a {
                 display:block;
                 opacity:.7;
                 text-decoration: none;
-                font-size:rem(13);
+                font-size:rem(12);
                 padding-top:rem(3);
                 color:#0F192B;
 

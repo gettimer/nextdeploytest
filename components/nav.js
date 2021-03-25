@@ -58,7 +58,7 @@ export default function Nav() {
         return () => window.removeEventListener("click", handleClickC);
     }, [subMenuC]);
 
-    return (<header className={scr ? `${styles.main_nav} ${styles.main_nav_fix}` : `${styles.main_nav}`}>
+    return (<><header className={scr ? `${styles.main_nav} ${styles.main_nav_fix}` : `${styles.main_nav}`}>
         <div className='container'>
             <div className={styles.nav_wrapper}>
                 <Link href='/'>
@@ -84,7 +84,7 @@ export default function Nav() {
                     </nav>
                         <ContactButtons />
                         {subMenu ? <div className={styles.sub_menu} ref={dropdown}>
-                            <img src='/img/submenu.jpg' />
+                            <img src='/img/submenu.jpg' className={styles.submenu_image} />
                             <div className={styles.sub_menu_content}>
                                 <span className={styles.sub_menu_title}>Ürünler</span>
                                 <div className={styles.sub_menu_grid}>
@@ -103,12 +103,6 @@ export default function Nav() {
                                         </Link>
                                         <Link href=''>
                                             <a>Logo Go 3</a>
-                                        </Link>
-                                        <Link href=''>
-                                            <a>Logo Netsis Wings Entegre</a>
-                                        </Link>
-                                        <Link href=''>
-                                            <a>Logo Netsis 3 Entegre</a>
                                         </Link>
                                         <Link href=''>
                                             <a>Logo Mali Müşavir 3</a>
@@ -140,18 +134,6 @@ export default function Nav() {
                                         <Link href=''>
                                             <a>Logo Tiger 3</a>
                                         </Link>
-                                        <Link href=''>
-                                            <a>Logo Netsis Wings Enterprise</a>
-                                        </Link>
-                                        <Link href=''>
-                                            <a>Logo Netsis 3 Enterprise</a>
-                                        </Link>
-                                        <Link href=''>
-                                            <a>Logo Netsis Wings</a>
-                                        </Link>
-                                        <Link href=''>
-                                            <a>Logo Netsis 3 Standart</a>
-                                        </Link>
                                         <div className={styles.block_title}>
                                             <img src='/img/navicons/diger.svg' />PROJE ÇÖZÜMLERİ
                                 </div>
@@ -174,12 +156,6 @@ export default function Nav() {
                                         </Link>
                                         <Link href=''>
                                             <a>Logo Bordro Plus</a>
-                                        </Link>
-                                        <Link href=''>
-                                            <a>Logo Netsis HR</a>
-                                        </Link>
-                                        <Link href=''>
-                                            <a>Logo Netsis 3 Bordro</a>
                                         </Link>
                                         <Link href=''>
                                             <a>Logo Payroll</a>
@@ -523,5 +499,5 @@ export default function Nav() {
             </div>
         </div> : null}
 
-    </header>)
+    </header>{subMenu || subMenuC ? <div className={styles.nav_layout}></div> : null}</>)
 }
