@@ -12,7 +12,7 @@ export default function ContactButtons() {
                 <img src='/img/call.svg' />0224 <span> 271 75 80</span>
             </a>
         </Link>
-        <Link href=''>
+        <Link href='http://destek.terapiyazilim.com'>
             <a className={styles.support_btn}>
                 Kurumsal Destek
              </a>
