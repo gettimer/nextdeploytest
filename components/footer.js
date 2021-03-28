@@ -53,16 +53,11 @@ export default function Footer() {
                 <div className={styles.footer_right}>
                     <div className={styles.adress_block}>
                         <span>Merkez Ofis</span>
-                        Kırcaali Mah. Celal Bayar Cad.
-No:177-181 / D:101 (Karamanoğulları 2 Plaza)
-Osmangazi / Bursa
+                        19 Mayıs Mah. Piyade Sk. No: 10 Nilüfer/Bursa
                     </div>
                     <div className={styles.adress_block}>
-                        <span>Yazılım Ofisi</span>
-                        Görükle Mah. Üniversite-1 Cad.
-Ulutek Tekno Yazılım Geliştirme Merkezi
-Ar-Ge Binası No:933 / 415
-Nilüfer / Bursa
+                        <span>Arge Ofis</span>
+                        Ulutek Teknopark Yazılım Geliştirme Merkezi Ar-Ge Binası No:933 / 415 Nilüfer/Bursa
                     </div>
                     <div className={styles.contact_links}>
                         <ContactButtons />

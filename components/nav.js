@@ -8,16 +8,22 @@ import { products } from '../lib/contents'
 import slug from 'slug'
 
 export default function Nav() {
+    const [subMenuK, setSubMenuK] = useState(false);
+    const [subMenuH, setSubMenuH] = useState(false);
     const [subMenu, setSubMenu] = useState(false);
     const [subMenuC, setSubMenuC] = useState(false);
     const [scr, setScr] = useState(false);
     const [pushNav, setPushNav] = useState(false);
     const [openState, setOpenState] = useState(null);
     const [openSubState, setOpenSubState] = useState(null);
-    const dropdown = useRef(null);
+    const naviK = useRef(null);
+    const naviH = useRef(null);
     const navi = useRef(null);
-    const dropdownC = useRef(null);
     const naviC = useRef(null);
+    const dropdownK = useRef(null);
+    const dropdownH = useRef(null);
+    const dropdown = useRef(null);
+    const dropdownC = useRef(null);
     const handleScroll = useCallback((event) => {
         window.scrollY > 10 ? setScr(true) : setScr(false);
     })
@@ -27,6 +33,26 @@ export default function Nav() {
             window.removeEventListener("scroll", handleScroll, false);
         };
     }, []);
+    useEffect(() => {
+        if (!subMenuK) return;
+        function handleClickK(event) {
+            if (dropdownK.current && !dropdownK.current.contains(event.target) && !naviK.current.contains(event.target)) {
+                setSubMenuK(false);
+            }
+        }
+        window.addEventListener("click", handleClickK);
+        return () => window.removeEventListener("click", handleClickK);
+    }, [subMenuK]);
+    useEffect(() => {
+        if (!subMenuH) return;
+        function handleClickH(event) {
+            if (dropdownH.current && !dropdownH.current.contains(event.target) && !naviH.current.contains(event.target)) {
+                setSubMenuH(false);
+            }
+        }
+        window.addEventListener("click", handleClickH);
+        return () => window.removeEventListener("click", handleClickH);
+    }, [subMenuH]);    
     useEffect(() => {
         if (!subMenu) return;
         function handleClick(event) {
@@ -47,7 +73,6 @@ export default function Nav() {
         window.addEventListener("click", handleClickC);
         return () => window.removeEventListener("click", handleClickC);
     }, [subMenuC]);
-
     return (<><header className={scr ? `${styles.main_nav} ${styles.main_nav_fix}` : `${styles.main_nav}`}>
         <div className='container'>
             <div className={styles.nav_wrapper}>
@@ -59,8 +84,12 @@ export default function Nav() {
                 {!isMobile ?
                     <><nav className={styles.nav_list}>
                         <ul>
-                            <li><Link href='/kurumsal/hakkimizda'><a><span>Kurumsal</span></a></Link></li>
-                            <li><Link href='/hizmetler/danismanlik'><a><span>Hizmetler</span></a></Link></li>
+                            <li className={subMenuK && `${styles.active}`} ref={naviK}>
+                                <a onClick={() => setSubMenuK(b => !b)} ><span>Kurumsal</span></a>
+                            </li>
+                            <li className={subMenuH && `${styles.active}`} ref={naviH}>
+                                <a onClick={() => setSubMenuH(b => !b)} ><span>Hizmetler</span></a>
+                            </li>
                             <li className={subMenu && `${styles.active}`} ref={navi}>
                                 <a onClick={() => setSubMenu(b => !b)} ><span>Ürünler</span></a>
                             </li>
@@ -73,12 +102,55 @@ export default function Nav() {
                         </ul>
                     </nav>
                         <ContactButtons />
+                        {subMenuK ? <div className={styles.sub_menu} ref={dropdownK}>
+                            <img src='/img/submenu.jpg' />
+                            <div className={styles.sub_menu_content}>
+                                <span className={styles.sub_menu_title}>Kurumsal</span>
+                                <div className={styles.sub_menu_grid}>
+                                    <div className={styles.sub_menu_block}>
+                                        <Link href='/kurumsal/hakkimizda'>
+                                            <a>Hakkımmızda</a>
+                                        </Link>
+                                        <Link href='/kurumsal/vizyon-misyon'>
+                                            <a>Vizyon/Misyon</a>
+                                        </Link>
+                                        <Link href='kurumsal/zaman-tuneli'>
+                                            <a>Zaman Tüneli</a>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> : null}                        
+                        {subMenuH ? <div className={styles.sub_menu} ref={dropdownH}>
+                            <img src='/img/submenu.jpg' />
+                            <div className={styles.sub_menu_content}>
+                                <span className={styles.sub_menu_title}>Hizmetler</span>
+                                <div className={styles.sub_menu_grid}>
+                                    <div className={styles.sub_menu_block}>
+                                        <Link href=''>
+                                            <a>Eğitim Hizmetleri</a>
+                                        </Link>
+                                        <Link href=''>
+                                            <a>Destek Hizmetleri</a>
+                                        </Link>
+                                        <Link href=''>
+                                            <a>Danışmanlık Hizmetleri</a>
+                                        </Link>
+                                        <Link href=''>
+                                            <a>Yazılım Hizmetleri</a>
+                                        </Link>
+                                        <Link href=''>
+                                            <a>Proje Yönetimi</a>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> : null}
                         {subMenu ? <div className={styles.sub_menu} ref={dropdown}>
                             <img src='/img/submenu.jpg' className={styles.submenu_image} />
                             <div className={styles.sub_menu_content}>
                                 <span className={styles.sub_menu_title}>Ürünler</span>
                                 <div className={styles.sub_menu_grid}>
-
                                     {products.map((product, index) =>
                                         <>
                                             {index % 3 === 0 ? <div className={styles.sub_menu_block}>
