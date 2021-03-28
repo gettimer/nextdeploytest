@@ -9,20 +9,20 @@ export default function Refs() {
             <Link href=''>
                 <a>
                     <img src='/img/home/lojistik.jpg' />
-                    <span>Depolama Lojistik</span>
+                    <span>Tekstil, hazır giyim ve deri üretimi</span>
                 </a>
             </Link>
             <Link href=''>
                 <a>
                     <img src='/img/home/caferest.jpg' />
-                    <span>Cafe & Restaurant</span>
+                    <span>Otomotiv ve otomotiv yan sanayi</span>
                 </a>
             </Link>
         </div>
         <Link href=''>
             <a className={styles.big_link}>
                 <img src='/img/home/bilisim.jpg' />
-                <span>Bilişim Sektörü</span>
+                <span>Elektrik ve elektronik</span>
             </a>
         </Link>
         <div className={styles.content_block}>
