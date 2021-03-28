@@ -1,0 +1,53 @@
+@import 'core/mixins';
+@import 'modules/subpage_header';
+
+.references {
+    width:100%;
+
+    h3 {
+            font-size:rem(30);
+            font-family: 'Gilroy-Bold';
+            color:#0F192B;
+            margin:rem(40) 0;
+            position:relative;
+            padding-top:rem(20);
+            &:after {
+                content:'';
+                position:absolute;
+                top:0;
+                left:0;
+                width:rem(60);
+                height:rem(4);
+                background-color:#F79A42;
+            }
+        }
+
+    .ref_grid {
+        width:100%;
+        display:flex;
+        align-items:flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .ref {
+            width:24%;
+            margin-bottom:rem(20);
+            img {
+                height:rem(240);
+                width:100%;
+                object-fit: cover;
+            }
+            strong {
+                display:block;
+                font-size:rem(14);
+            }
+            small {
+                display:block;
+                opacity:.7;
+                font-size:rem(11);
+            }
+        }
+    }
+}
+
+

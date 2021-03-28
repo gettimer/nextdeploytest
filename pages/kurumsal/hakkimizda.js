@@ -13,7 +13,7 @@ export default function Hakkimizda() {
             </Head>
             <div className={styles.subpage_header}>
                 <div className={styles.header_content}>
-                    <h1>Kurumsal</h1>
+                    <h1>Hakkımızda</h1>
                     <div className={styles.breadcrumb}>
                         <Link href=''><a>anasayfa</a></Link>
                         <Link href=''><a>kurumsal</a></Link>
@@ -26,8 +26,8 @@ export default function Hakkimizda() {
                 <div className='container'>
                     <div className={styles.subpage_nav_container}>
                         <Link href=''><a className={styles.active}>Hakkımızda</a></Link>
-                        <Link href=''><a>Vizyon & Misyon</a></Link>
-                        <Link href=''><a>Zaman Tüneli</a></Link>
+                        <Link href='/kurumsal/vizyon-misyon'><a>Vizyon & Misyon</a></Link>
+                        <Link href='/kurumsal/zaman-tuneli'><a>Zaman Tüneli</a></Link>
                     </div>
                 </div>
             </div>
@@ -39,11 +39,20 @@ export default function Hakkimizda() {
                         <p>Terapi Yazılım; araştıran ve geliştiren, müşteri memnuniyetine önem veren, iş ahlakından taviz vermeyen, güvenilir, yenilikçi ve çağdaş görüşü kendisine benimseyen ve bu ilkeler doğrultusunda hareket eden kuruluştur.</p>
                         <p><strong>Terapi Yazılım; Proje Danışmanlığı, Logo Destek Hizmetleri, Logo Raporlama Çözümleri</strong> ve <strong>Logoya Entegre Yazılımlarla</strong> firmaların daha hızlı ve aktif bir şekilde finansmanını, üretim yönetimini, firma giderlerini yönetebileceği uygulamalarla destek vermektedir.</p>
 
-                        <p>Müşteri Avantajları</p>
+                        <p><strong>Müşteri Avantajları</strong></p>
                         <p>Genç ve dinamik kadrosuyla yenilikçi çözümler sunar. Sektörel tecrübesi ve konusunda uzman sertifikalı kadroya sahiptir.</p>
                         <p>Acil problemleri çözmesi için ofiste devamlı yetkin personel bulundurur.</p>
                         <p>Sadece bir destek firması değil, ihtiyaçlarınızın analizi için gerekli zamanı ayırarak proje bazlı çözümler sunar.</p>
                         <p>Bilgi-İşlem sektörünü takip ederek yenilikleri firmaların bilgisi doğrultusunda uygular ve irmaların bilişim sektöründe güncel kalmasını sağlar.</p>
+
+                        <p><strong>Vermekte Olduğumuz Hizmetler</strong></p>
+                        <p>Mali dönem devir işlemleri</p>
+                        <p>Proje Danışmanlığı</p>
+                        <p>Logo Destek (Teledestek, Yerinde Destek, Uzak Erişim)</p>
+                        <p>Kurumsal ve Bireysel Eğitimler</p>
+                        <p>Özel Çözümler (İşlem Kolaylığı, İş Pratikliği)</p>
+                        <p>Raporlama Çözümleri</p>
+                        <p>Veri Bakımı ve Güvenliği</p>
                     </div>
                     <div className={styles.media}>
                         <img src='/img/about.jpg' />

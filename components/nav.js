@@ -60,14 +60,14 @@ export default function Nav() {
                     <><nav className={styles.nav_list}>
                         <ul>
                             <li><Link href='/kurumsal/hakkimizda'><a><span>Kurumsal</span></a></Link></li>
-                            <li><a><span>Hizmetler</span></a></li>
+                            <li><Link href='/hizmetler/danismanlik'><a><span>Hizmetler</span></a></Link></li>
                             <li className={subMenu && `${styles.active}`} ref={navi}>
                                 <a onClick={() => setSubMenu(b => !b)} ><span>Ürünler</span></a>
                             </li>
                             <li className={subMenuC && `${styles.active}`} ref={naviC}>
                                 <a onClick={() => setSubMenuC(b => !b)} ><span>Çözümler</span></a>
                             </li>
-                            <li><Link href=''><a><span>Referanslar</span></a></Link></li>
+                            <li><Link href='/referanslar'><a><span>Referanslar</span></a></Link></li>
                             <li><Link href=''><a><span>Başarı Hikayeleri</span></a></Link></li>
                             <li><Link href=''><a><span>İletişim</span></a></Link></li >
                         </ul>
