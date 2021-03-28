@@ -127,19 +127,19 @@ export default function Nav() {
                                 <span className={styles.sub_menu_title}>Hizmetler</span>
                                 <div className={styles.sub_menu_grid}>
                                     <div className={styles.sub_menu_block}>
-                                        <Link href=''>
+                                        <Link href='/hizmetler/egitim'>
                                             <a>Eğitim Hizmetleri</a>
                                         </Link>
-                                        <Link href=''>
+                                        <Link href='/hizmetler/destek'>
                                             <a>Destek Hizmetleri</a>
                                         </Link>
-                                        <Link href=''>
+                                        <Link href='/hizmetler/danismanlik'>
                                             <a>Danışmanlık Hizmetleri</a>
                                         </Link>
-                                        <Link href=''>
+                                        <Link href='/hizmetler/ozel-yazilim'>
                                             <a>Yazılım Hizmetleri</a>
                                         </Link>
-                                        <Link href=''>
+                                        <Link href='/hizmetler/proje-yonetimi'>
                                             <a>Proje Yönetimi</a>
                                         </Link>
                                     </div>

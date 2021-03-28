@@ -35,10 +35,11 @@ export default function Hizmetler() {
 
                         <div className={styles.vert_nav}>
                             <ul>
-                                <li><Link href='/hizmetler/danismanlik'><a className={styles.active}>Danışmanlık</a></Link></li>
-                                <li><Link href='/hizmetler/destek'><a>Destek</a></Link></li>
-                                <li><Link href='/hizmetler/egitim'><a>Eğitim</a></Link></li>
-                                <li><Link href='/hizmetler/ozel-yazilim'><a>Özel Yazılım</a></Link></li>
+                                <li><Link href='/hizmetler/egitim'><a>Eğitim Hizmetleri</a></Link></li>
+                                <li><Link href='/hizmetler/destek'><a>Destek Hizmetleri</a></Link></li>
+                                <li><Link href='/hizmetler/danismanlik'><a className={styles.active}>Danışmanlık Hizmetleri</a></Link></li>
+                                <li><Link href='/hizmetler/ozel-yazilim'><a>Yazılım Hizmetleri</a></Link></li>
+                                <li><Link href='/hizmetler/proje-yonetimi'><a>Proje Yönetimi</a></Link></li>
                             </ul>
                         </div>
 

@@ -13,7 +13,7 @@ export default function Hizmetler() {
         <Layout>
 
             <Head>
-                <title>Terapi Yazılım - Danışmanlık Hizmetleri</title>
+                <title>Terapi Yazılım - Yazılım Hizmetleri</title>
                 <meta name="keywords" content="" />
                 <meta name="description" content="" />
                 <link rel="icon" href="/favicon.ico" />
@@ -21,11 +21,11 @@ export default function Hizmetler() {
 
             <div className={styles.subpage_header}>
                 <div className={styles.header_content}>
-                    <h1>Özel Yazılım</h1>
+                    <h1>Yazılım Hizmetleri</h1>
                     <div className={styles.breadcrumb}>
                         <Link href='/'><a>anasayfa</a></Link>
                         <Link href=''><a>hizmetler</a></Link>
-                        <Link href=''><a>özel yazılım</a></Link>
+                        <Link href=''><a>yazılım hizmetleri</a></Link>
                     </div>
                 </div>
                 <img src='/img/producttop.jpg' />
@@ -36,18 +36,11 @@ export default function Hizmetler() {
 
                         <div className={styles.vert_nav}>
                             <ul>
-                                <li>
-                                    <Link href='/hizmetler/danismanlik'><a>Danışmanlık</a></Link>
-                                </li>
-                                <li>
-                                    <Link href='/hizmetler/destek'><a>Destek</a></Link>
-                                </li>
-                                <li>
-                                    <Link href='/hizmetler/egitim'><a>Eğitim</a></Link>
-                                </li>
-                                <li>
-                                    <Link href='/hizmetler/ozel-yazilim'><a className={styles.active}>Özel Yazılım</a></Link>
-                                </li>
+                                <li><Link href='/hizmetler/egitim'><a>Eğitim Hizmetleri</a></Link></li>
+                                <li><Link href='/hizmetler/destek'><a>Destek Hizmetleri</a></Link></li>
+                                <li><Link href='/hizmetler/danismanlik'><a>Danışmanlık Hizmetleri</a></Link></li>
+                                <li><Link href='/hizmetler/ozel-yazilim'><a className={styles.active}>Yazılım Hizmetleri</a></Link></li>
+                                <li><Link href='/hizmetler/proje-yonetimi'><a>Proje Yönetimi</a></Link></li>
                             </ul>
                         </div>
 
