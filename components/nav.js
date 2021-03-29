@@ -52,7 +52,7 @@ export default function Nav() {
         }
         window.addEventListener("click", handleClickH);
         return () => window.removeEventListener("click", handleClickH);
-    }, [subMenuH]);    
+    }, [subMenuH]);
     useEffect(() => {
         if (!subMenu) return;
         function handleClick(event) {
@@ -98,12 +98,12 @@ export default function Nav() {
                             </li>
                             <li><Link href='/referanslar'><a><span>Referanslar</span></a></Link></li>
                             <li><Link href=''><a><span>Başarı Hikayeleri</span></a></Link></li>
-                            <li><Link href=''><a><span>İletişim</span></a></Link></li >
+                            <li><Link href='/iletisim'><a><span>İletişim</span></a></Link></li >
                         </ul>
                     </nav>
                         <ContactButtons />
                         {subMenuK ? <div className={styles.sub_menu} ref={dropdownK}>
-                            <img src='/img/nav/kurumsal.jpeg' />
+                            <img src='/img/nav/kurumsal.jpg' className={styles.submenu_image} />
                             <div className={styles.sub_menu_content}>
                                 <span className={styles.sub_menu_title}>Kurumsal</span>
                                 <div className={styles.sub_menu_grid}>
@@ -120,9 +120,9 @@ export default function Nav() {
                                     </div>
                                 </div>
                             </div>
-                        </div> : null}                        
+                        </div> : null}
                         {subMenuH ? <div className={styles.sub_menu} ref={dropdownH}>
-                            <img src='/img/nav/hizmetler.jpeg' />
+                            <img src='/img/nav/hizmetler.jpg' className={styles.submenu_image} />
                             <div className={styles.sub_menu_content}>
                                 <span className={styles.sub_menu_title}>Hizmetler</span>
                                 <div className={styles.sub_menu_grid}>
@@ -147,7 +147,7 @@ export default function Nav() {
                             </div>
                         </div> : null}
                         {subMenu ? <div className={styles.sub_menu} ref={dropdown}>
-                            <img src='/img/nav/urunler.jpeg' className={styles.submenu_image} />
+                            <img src='/img/nav/urunler.jpg' className={styles.submenu_image} />
                             <div className={styles.sub_menu_content}>
                                 <span className={styles.sub_menu_title}>Ürünler</span>
                                 <div className={styles.sub_menu_grid}>
@@ -179,7 +179,7 @@ export default function Nav() {
                             </div>
                         </div> : null}
                         {subMenuC ? <div className={styles.sub_menu} ref={dropdownC}>
-                            <img src='/img/nav/cozumler.jpeg' />
+                            <img src='/img/nav/cozumler.jpg' className={styles.submenu_image} />
                             <div className={styles.sub_menu_content}>
                                 <span className={styles.sub_menu_title}>Çözümler</span>
                                 <div className={styles.sub_menu_grid}>
@@ -308,5 +308,5 @@ export default function Nav() {
                 </ul>
             </div>
         </div> : null}
-    </header>{subMenu || subMenuC ? <div className={styles.nav_layout}></div> : null}</>)
+    </header>{subMenu || subMenuC || subMenuH || subMenuK ? <div className={styles.nav_layout}></div> : null}</>)
 }

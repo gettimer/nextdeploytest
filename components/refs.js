@@ -6,22 +6,22 @@ import Link from 'next/link'
 export default function Refs() {
     return (<div className={styles.refs}>
         <div className={styles.link_block}>
-            <Link href=''>
+            <Link href='/referanslar'>
                 <a>
-                    <img src='/img/ref/tekstil.jpeg' />
+                    <img src='/img/ref/tekstil.jpg' />
                     <span>Tekstil, hazır giyim ve deri üretimi</span>
                 </a>
             </Link>
-            <Link href=''>
+            <Link href='/referanslar'>
                 <a>
-                    <img src='/img/ref/otomotiv.jpeg' />
+                    <img src='/img/ref/otomotiv.jpg' />
                     <span>Otomotiv ve otomotiv yan sanayi</span>
                 </a>
             </Link>
         </div>
-        <Link href=''>
+        <Link href='/referanslar'>
             <a className={styles.big_link}>
-                <img src='/img/ref/elektonik.jpeg' />
+                <img src='/img/ref/elektonik.jpg' />
                 <span>Elektrik ve elektronik</span>
             </a>
         </Link>

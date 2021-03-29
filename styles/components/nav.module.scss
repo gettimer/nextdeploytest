@@ -57,22 +57,6 @@
                         animation-name: example2;
                         animation-duration: .4s;
                     }
-                    /*&:after {
-                        content:'';
-                        width:100%;
-                        height:rem(65);
-                        left:rem(-10);
-                        top:rem(-10);
-                        position:absolute;
-                        background-color:white;
-                        border-top-right-radius: rem(10);
-                        border-top-left-radius: rem(10);
-                    }
-                    span {
-                        position:relative;
-                        color:#0F192B;
-                        z-index:3;
-                    }*/
                 }
         }
     }
@@ -92,6 +76,7 @@
 }
 
 .sub_menu {
+    min-width:rem(700);
     height:auto;
     background-color:white;
     border-radius:rem(10);
@@ -119,6 +104,7 @@
 
 .submenu_image {
     max-width:rem(270);
+    min-height:rem(400);
     object-fit: cover;
     border-top-left-radius: rem(10);
     border-bottom-left-radius: rem(10);
