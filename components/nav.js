@@ -103,7 +103,7 @@ export default function Nav() {
                     </nav>
                         <ContactButtons />
                         {subMenuK ? <div className={styles.sub_menu} ref={dropdownK}>
-                            <img src='/img/submenu.jpg' />
+                            <img src='/img/nav/kurumsal.jpeg' />
                             <div className={styles.sub_menu_content}>
                                 <span className={styles.sub_menu_title}>Kurumsal</span>
                                 <div className={styles.sub_menu_grid}>
@@ -122,7 +122,7 @@ export default function Nav() {
                             </div>
                         </div> : null}                        
                         {subMenuH ? <div className={styles.sub_menu} ref={dropdownH}>
-                            <img src='/img/submenu.jpg' />
+                            <img src='/img/nav/hizmetler.jpeg' />
                             <div className={styles.sub_menu_content}>
                                 <span className={styles.sub_menu_title}>Hizmetler</span>
                                 <div className={styles.sub_menu_grid}>
@@ -147,7 +147,7 @@ export default function Nav() {
                             </div>
                         </div> : null}
                         {subMenu ? <div className={styles.sub_menu} ref={dropdown}>
-                            <img src='/img/submenu.jpg' className={styles.submenu_image} />
+                            <img src='/img/nav/urunler.jpeg' className={styles.submenu_image} />
                             <div className={styles.sub_menu_content}>
                                 <span className={styles.sub_menu_title}>Ürünler</span>
                                 <div className={styles.sub_menu_grid}>
@@ -179,7 +179,7 @@ export default function Nav() {
                             </div>
                         </div> : null}
                         {subMenuC ? <div className={styles.sub_menu} ref={dropdownC}>
-                            <img src='/img/submenu.jpg' />
+                            <img src='/img/nav/cozumler.jpeg' />
                             <div className={styles.sub_menu_content}>
                                 <span className={styles.sub_menu_title}>Çözümler</span>
                                 <div className={styles.sub_menu_grid}>

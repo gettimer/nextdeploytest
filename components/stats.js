@@ -8,19 +8,19 @@ export default function Stats() {
         <div className='container'>
             <div className={styles.stats_wrapper}>
                 <div className={styles.stats_block}>
-                    <h4>300+</h4>
+                    <h4>466+</h4>
                     <p>Aktif Müşteri</p>
                 </div>
                 <div className={styles.stats_block}>
-                    <h4>40+</h4>
+                    <h4>128+</h4>
                     <p>Tamamlanmış Proje</p>
                 </div>
                 <div className={styles.stats_block}>
-                    <h4>10000+</h4>
+                    <h4>754853+</h4>
                     <p>Saat Yazılım Geliştirme</p>
                 </div>
                 <div className={styles.stats_block}>
-                    <h4>100+</h4>
+                    <h4>59+</h4>
                     <p>Referans</p>
                 </div>
             </div>

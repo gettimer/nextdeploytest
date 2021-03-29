@@ -8,20 +8,20 @@ export default function Refs() {
         <div className={styles.link_block}>
             <Link href=''>
                 <a>
-                    <img src='/img/home/lojistik.jpg' />
+                    <img src='/img/ref/tekstil.jpeg' />
                     <span>Tekstil, hazır giyim ve deri üretimi</span>
                 </a>
             </Link>
             <Link href=''>
                 <a>
-                    <img src='/img/home/caferest.jpg' />
+                    <img src='/img/ref/otomotiv.jpeg' />
                     <span>Otomotiv ve otomotiv yan sanayi</span>
                 </a>
             </Link>
         </div>
         <Link href=''>
             <a className={styles.big_link}>
-                <img src='/img/home/bilisim.jpg' />
+                <img src='/img/ref/elektonik.jpeg' />
                 <span>Elektrik ve elektronik</span>
             </a>
         </Link>

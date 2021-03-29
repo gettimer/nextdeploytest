@@ -31,7 +31,7 @@ export default function Referanslar() {
                             <div className={styles.ref}>
                                 <img src={`/img/ref/${ele.image}`} />
                                 <strong>{ele.name}</strong>
-                                <small>{ele.count} Firma</small>
+                                <small>{ele.count}+ Müşteri</small>
                             </div>
                         ))}
 
