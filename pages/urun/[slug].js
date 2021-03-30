@@ -75,7 +75,7 @@ export default function Product({ prod, category_id }) {
                             <div>
                                 <ul>
                                     {prod[0].props.map(e => (
-                                        <li>{e.p}</li>
+                                        <li><strong>{e.p}</strong></li>
                                     ))}
                                 </ul>
                             </div>
