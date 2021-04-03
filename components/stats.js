@@ -16,7 +16,7 @@ export default function Stats() {
                     <p>Tamamlanmış Proje</p>
                 </div>
                 <div className={styles.stats_block}>
-                    <h4>754853+</h4>
+                    <h4>12000+</h4>
                     <p>Saat Yazılım Geliştirme</p>
                 </div>
                 <div className={styles.stats_block}>

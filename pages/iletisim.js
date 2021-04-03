@@ -71,7 +71,7 @@ export default function Iletisim() {
                                     ADRES
                                 </span>
                                 <p>
-                                    Kırcaali Mah. Celal Bayar Cad. No:177-181 / D:101 (Karamanoğulları 2 Plaza) Osmangazi / Bursa
+                                    19 Mayıs Mah. Piyade Sk. No: 10 Nilüfer/Bursa
                                 </p>
                             </div>
                             <div>
@@ -80,6 +80,12 @@ export default function Iletisim() {
                                 </span>
                                 <span className={styles.phone}>
                                     0 224 <strong>271 75 80</strong>
+                                </span>
+                                <span className={`${styles.title} ${styles.title_top}`}>
+                                    TELEFON 2
+                                </span>
+                                <span className={styles.phone}>
+                                    0 224 <strong>442 80 42</strong>
                                 </span>
                                 <span className={`${styles.title} ${styles.title_top}`}>
                                     E-POSTA
@@ -100,7 +106,7 @@ export default function Iletisim() {
                     />
                     <div className={`${styles.contact_box} ${styles.contact_box_left}`}>
                         <div className={styles.heading}>
-                            Yazılım ofisi
+                            Arge Ofis
                         </div>
                         <div className={styles.split_box}>
                             <div>
@@ -108,16 +114,10 @@ export default function Iletisim() {
                                     ADRES
                                 </span>
                                 <p>
-                                    Görükle Mah. Üniversite-1 Cad. Ulutek Tekno Yazılım Geliştirme Merkezi Ar-Ge Binası No:933 / 415 Nilüfer / Bursa
+                                    Ulutek Teknopark Yazılım Geliştirme Merkezi Ar-Ge Binası No:933 / 415 Nilüfer/Bursa
                                 </p>
                             </div>
                             <div>
-                                <span className={styles.title}>
-                                    TELEFON
-                                </span>
-                                <span className={styles.phone}>
-                                    0 224 <strong>442 80 42</strong>
-                                </span>
                                 <span className={`${styles.title} ${styles.title_top}`}>
                                     E-POSTA
                                 </span>

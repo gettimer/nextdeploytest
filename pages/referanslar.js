@@ -17,7 +17,7 @@ export default function Referanslar() {
                     <h1>Referanslar</h1>
                     <div className={styles.breadcrumb}>
                         <Link href='/'><a>anasayfa</a></Link>
-                        <Link href=''><a>referasnlar</a></Link>
+                        <Link href=''><a>referanslar</a></Link>
                     </div>
                 </div>
                 <img src='/img/ref.jpg' />
