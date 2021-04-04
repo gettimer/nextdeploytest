@@ -66,6 +66,7 @@
         position:relative;
         .contact_box {
             width:80%;
+            height:rem(350);
             background-color:#F8F8F9;
             position:absolute;
             right:0;
@@ -129,4 +130,122 @@
     }
 }
 
+.contact {
+    width:100%;
+}
 
+.form_layout {
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: rem(100);
+    .form_content {
+        width:60%;
+    }
+    .form_selection {
+        width:30%;
+    }
+
+}
+
+.form_body {
+    margin-top:rem(50);
+}
+.field {
+    max-width:rem(450);
+    display: block;
+    position: relative;
+    margin-top: 24px;
+    margin-bottom:rem(35);
+}
+
+.field__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  transform-origin: 0 0;
+  transform: translate3d(0, 12px, 0);
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  transition: transform .2s;
+  pointer-events: none;
+}
+
+.field__input {
+  appearance: none;
+  width: 100%;
+  padding: 12px 0;
+  border-bottom: solid rem(2) rgba(#777B86,.5);
+  outline: none;  
+  font-size: 16px;
+  line-height: 20px;
+
+  &::placeholder {
+    color: transparent !important;
+    user-select: none !important;
+  }
+}
+
+.field__input:focus + .field__label,
+.field__input:not(:placeholder-shown) + .field__label {
+  transform: translate3d(0, -100%, 0) scale(0.875);
+}
+
+.field__input:focus {
+    border-color: #F79A42;
+}
+
+.field_select {
+    max-width:rem(450);
+    display: block;
+    margin-bottom:rem(35);
+    select {
+        width:100%;
+        border-bottom:solid rem(2) rgba(#777B86,.5);
+        padding:rem(12) 0;
+        font-size:rem(16);
+    }
+}
+
+.send {
+    background-color:#F79A42;
+    width:rem(170);
+    color:white;
+    font-weight:600;
+    border:0;
+    height:rem(50);
+    border-radius:rem(40);
+    margin-top:rem(30);
+}
+
+.form_select_grid {
+    width:100%;
+    display:flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: rem(30);
+    a {
+        width:48%;
+        height:rem(150);
+        text-decoration: none;
+        font-size:rem(12);
+        padding:rem(20) rem(40) rem(20) rem(20);
+        border-radius:rem(4);
+        background-color:#3B64B2;
+        font-weight:600;
+        color:white;
+        display:flex;
+        flex-direction:column;
+        margin-bottom: 2.5%;
+
+        svg {
+            margin-bottom: rem(15);
+            g {
+                fill: #F79A42;
+            }
+        }
+    }
+}

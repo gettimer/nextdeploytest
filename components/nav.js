@@ -162,9 +162,14 @@ export default function Nav() {
                                                                     <img src={'/img/navicons/' + p.category_icn} />{p.category}
                                                                 </div>
                                                                 {p.contents.map(ele =>
-                                                                    <Link href='/urun/[slug]' as={`/urun/${slug(ele.name)}-${p.category_id}-${ele.id}`}>
-                                                                        <a onClick={() => setSubMenu(false)}>{ele.name}</a>
-                                                                    </Link>
+                                                                    <>
+                                                                        {ele.menu ?
+                                                                            <Link href='/urun/[slug]' as={`/urun/${slug(ele.name)}-${p.category_id}-${ele.id}`}>
+                                                                                <a onClick={() => setSubMenu(false)}>{ele.name}</a>
+                                                                            </Link>
+                                                                            : null}
+                                                                    </>
+
                                                                 )}
 
                                                             </>

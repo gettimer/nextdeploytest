@@ -34,7 +34,7 @@ export default function Iletisim() {
                     <h1>İletişim</h1>
                     <div className={styles.breadcrumb}>
                         <Link href='/'><a>anasayfa</a></Link>
-                        <Link href=''><a>iletişim</a></Link>
+                        <Link href='/forms/sizi-arayalim'><a>iletişim</a></Link>
                     </div>
                 </div>
                 <img src='/img/contact.jpg' />
@@ -43,7 +43,7 @@ export default function Iletisim() {
                 <div className='container'>
                     <div className={styles.subpage_nav_container}>
                         <Link href=''><a className={styles.active}>İletişim</a></Link>
-                        <Link href='/sizi-arayalim'><a>Sizi Arayalım</a></Link>
+                        <Link href='/forms/sizi-arayalim'><a>Sizi Arayalım</a></Link>
                     </div>
                 </div>
             </div>
@@ -55,12 +55,7 @@ export default function Iletisim() {
 
             <div className={styles.split_content}>
                 <div className={styles.contact_content}>
-                    <MapWithAMarker
-                        googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4R6AN7SmujjPUIGKdyao2Kqitzr1kiRg&v=3.exp&libraries=geometry,drawing,places"
-                        loadingElement={<div style={{ height: `100%` }} />}
-                        containerElement={<div style={{ height: `400px` }} />}
-                        mapElement={<div style={{ height: `100%` }} />}
-                    />
+                    <a target="_blank" href="https://www.google.com/maps/place/TERAP%C4%B0+YAZILIM/@40.222149,28.8527686,15.21z/data=!4m5!3m4!1s0x14ca0f265139d24f:0xeba5ffff10151b00!8m2!3d40.222595!4d28.858353"><img src='/img/map1.png' /></a>
                     <div className={styles.contact_box}>
                         <div className={styles.heading}>
                             Merkez Ofis
@@ -98,12 +93,7 @@ export default function Iletisim() {
                     </div>
                 </div>
                 <div className={styles.contact_content}>
-                    <MapWithAMarker
-                        googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4R6AN7SmujjPUIGKdyao2Kqitzr1kiRg&v=3.exp&libraries=geometry,drawing,places"
-                        loadingElement={<div style={{ height: `100%` }} />}
-                        containerElement={<div style={{ height: `400px` }} />}
-                        mapElement={<div style={{ height: `100%` }} />}
-                    />
+                    <a target="_blank" href="https://www.google.com/maps/place/TERAP%C4%B0+YAZILIM/@40.222149,28.8527686,15.21z/data=!4m5!3m4!1s0x14ca0f265139d24f:0xeba5ffff10151b00!8m2!3d40.222595!4d28.858353"><img src='/img/map1.png' /></a>
                     <div className={`${styles.contact_box} ${styles.contact_box_left}`}>
                         <div className={styles.heading}>
                             Arge Ofis
@@ -131,6 +121,6 @@ export default function Iletisim() {
             </div>
 
 
-        </Layout>
+        </Layout >
     )
 }

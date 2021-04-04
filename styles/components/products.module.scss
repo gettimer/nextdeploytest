@@ -79,6 +79,7 @@
                 }
             }
         }
+        
     }
     &_totop {
         position:relative;
@@ -89,6 +90,8 @@
         top:rem(30);
     }
 }
+
+
 
 @media (max-width: 991.98px) { 
     .products {
