@@ -4,25 +4,10 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Layout from '../components/layout'
 import styles from '../styles/pages/contact.module.scss'
-import { references } from '../lib/contents'
-import {
-    withScriptjs,
-    withGoogleMap,
-    GoogleMap,
-    Marker,
-} from "react-google-maps";
+
 
 export default function Iletisim() {
-    const MapWithAMarker = withScriptjs(withGoogleMap(props =>
-        <GoogleMap
-            defaultZoom={8}
-            defaultCenter={{ lat: -34.397, lng: 150.644 }}
-        >
-            <Marker
-                position={{ lat: -34.397, lng: 150.644 }}
-            />
-        </GoogleMap>
-    ));
+
     return (
         <Layout>
             <Head>
