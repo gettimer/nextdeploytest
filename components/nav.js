@@ -189,19 +189,19 @@ export default function Nav() {
                                 <span className={styles.sub_menu_title}>Çözümler</span>
                                 <div className={styles.sub_menu_grid}>
                                     <div className={styles.sub_menu_block}>
-                                        <Link href=''>
+                                        <Link href='/cozumler/uretim-cozumleri'>
                                             <a>Üretim Çözümleri</a>
                                         </Link>
-                                        <Link href=''>
+                                        <Link href='/cozumler/depo-cozumleri'>
                                             <a>Depo Çözümleri</a>
                                         </Link>
-                                        <Link href=''>
+                                        <Link href='/cozumler/saha-satis-cozumleri'>
                                             <a>Saha Satış Çözümleri</a>
                                         </Link>
-                                        <Link href=''>
+                                        <Link href='/cozumler/finansal-cozumler'>
                                             <a>Finansal Çözümler</a>
                                         </Link>
-                                        <Link href=''>
+                                        <Link href='/cozumler/eticaret-entegrasyon'>
                                             <a> E-Ticaret Entegrasyon</a>
                                         </Link>
                                     </div>
@@ -224,13 +224,13 @@ export default function Nav() {
                         {openState === 1 ?
                             <ul>
                                 <li>
-                                    <Link href=''><a>Hakkımmızda</a></Link>
+                                    <Link href='/kurumsal/hakkimizda'><a>Hakkımmızda</a></Link>
                                 </li>
                                 <li>
-                                    <Link href=''><a>Vizyon/Misyon</a></Link>
+                                    <Link href='/kurumsal/vizyon-misyon'><a>Vizyon/Misyon</a></Link>
                                 </li>
                                 <li>
-                                    <Link href=''><a>Zaman Tüneli</a></Link>
+                                    <Link href='/kurumsal/zaman-tuneli'><a>Zaman Tüneli</a></Link>
                                 </li>
                             </ul> : null}
                     </li>
@@ -239,19 +239,16 @@ export default function Nav() {
                         {openState === 2 ?
                             <ul>
                                 <li>
-                                    <Link href=''><a>Eğitim Hizmetleri</a></Link>
+                                    <Link href='/hizmetler/egitim/'><a>Eğitim Hizmetleri</a></Link>
                                 </li>
                                 <li>
-                                    <Link href=''><a>Destek Hizmetleri</a></Link>
+                                    <Link href='/hizmetler/destek'><a>Destek Hizmetleri</a></Link>
                                 </li>
                                 <li>
-                                    <Link href=''><a>Danışmanlık Hizmetleri</a></Link>
+                                    <Link href='/hizmetler/danismanlik'><a>Danışmanlık Hizmetleri</a></Link>
                                 </li>
                                 <li>
-                                    <Link href=''><a>Yazılım Hizmetleri</a></Link>
-                                </li>
-                                <li>
-                                    <Link href=''><a>Proje Yönetimi</a></Link>
+                                    <Link href='/hizmetler/ozel-yazilim'><a>Yazılım Hizmetleri</a></Link>
                                 </li>
                             </ul>
                             : null}
@@ -266,6 +263,7 @@ export default function Nav() {
                                         {openSubState === ele.category_id ?
                                             <ul>
                                                 {ele.contents.map(p =>
+
                                                     <li key={p.id}>
                                                         <Link href='/urun/[slug]' as={`/urun/${slug(p.name)}-${ele.category_id}-${p.id}`}>
                                                             <a onClick={() => setPushNav(false)}>{p.name}</a>
@@ -284,31 +282,31 @@ export default function Nav() {
                         {openState === 4 ?
                             <ul>
                                 <li>
-                                    <Link href=''><a>Üretim Çözümleri</a></Link>
+                                    <Link href='/cozumler/uretim-cozumleri'><a>Üretim Çözümleri</a></Link>
                                 </li>
                                 <li>
-                                    <Link href=''><a>Depo Çözümleri</a></Link>
+                                    <Link href='/cozumler/depo-cozumleri'><a>Depo Çözümleri</a></Link>
                                 </li>
                                 <li>
-                                    <Link href=''><a>Saha Satış Çözümleri</a></Link>
+                                    <Link href='/cozumler/saha-satis-cozumleri'><a>Saha Satış Çözümleri</a></Link>
                                 </li>
                                 <li>
-                                    <Link href=''><a>Finansal Çözümler</a></Link>
+                                    <Link href='/cozumler/finansal-cozumler'><a>Finansal Çözümler</a></Link>
                                 </li>
                                 <li>
-                                    <Link href=''><a>E-Ticaret Entegrasyon</a></Link>
+                                    <Link href='/cozumler/eticaret-entegrasyon'><a>E-Ticaret Entegrasyon</a></Link>
                                 </li>
                             </ul>
                             : null}
                     </li>
                     <li>
-                        <Link href=''><a>REFERANSLAR</a></Link>
+                        <Link href='/referanslar'><a>REFERANSLAR</a></Link>
                     </li>
                     <li>
-                        <Link href=''><a>BAŞARI HİKAYELERİ</a></Link>
+                        <Link href='/basari-hikayeleri'><a>BAŞARI HİKAYELERİ</a></Link>
                     </li>
                     <li>
-                        <Link href=''><a>İLETİŞİM</a></Link>
+                        <Link href='/iletisim'><a>İLETİŞİM</a></Link>
                     </li>
                 </ul>
             </div>

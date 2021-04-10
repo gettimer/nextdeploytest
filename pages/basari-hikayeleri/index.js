@@ -8,12 +8,23 @@ import Layout from '../../components/layout'
 import styles from '../../styles/pages/testimonials.module.scss'
 import { products, testimonials } from '../../lib/contents'
 import slug from 'slug'
+import { isMobile } from 'react-device-detect';
 
 
 export default function Testimonials() {
+
+    let perView;
+
+    if (isMobile) {
+        perView = 1
+    }
+    else {
+        perView = 4;
+    }
+
     const [currentSlide, setCurrentSlide] = useState(0)
     const [sliderRef, slider] = useKeenSlider({
-        slidesPerView: 4,
+        slidesPerView: perView,
         mode: "free",
         spacing: 15,
         initial: 0,

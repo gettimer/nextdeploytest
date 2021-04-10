@@ -4,9 +4,23 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Layout from '../components/layout'
 import styles from '../styles/pages/contact.module.scss'
+import { isMobile } from 'react-device-detect';
+import dynamic from "next/dynamic";
+
+const NoSSR_IFrame_MAP = dynamic(() => import("../components/map"), {
+    ssr: false,
+});
+
 
 
 export default function Iletisim() {
+
+    const [maps, setMaps] = useState([
+        {
+            map0: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12186.874540991887!2d29.05058280679321!3d40.21532132806919!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4180aa310a4bfb9e!2zVGVyYXBpIFlhesSxbMSxbSAtIExvZ28gw4fDtnrDvG0gT3J0YcSfxLE!5e0!3m2!1str!2s!4v1435062861858',
+            map1: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12186.874540991887!2d29.05058280679321!3d40.21532132806919!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4180aa310a4bfb9e!2zVGVyYXBpIFlhesSxbMSxbSAtIExvZ28gw4fDtnrDvG0gT3J0YcSfxLE!5e0!3m2!1str!2s!4v1435062861858'
+        }
+    ])
 
     return (
         <Layout>
@@ -14,6 +28,7 @@ export default function Iletisim() {
                 <title>Terapi Yazılım - İletişim</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
+
             <div className={styles.subpage_header}>
                 <div className={styles.header_content}>
                     <h1>İletişim</h1>
@@ -24,6 +39,7 @@ export default function Iletisim() {
                 </div>
                 <img src='/img/contact.jpg' />
             </div>
+
             <div className={styles.subpage_horizontal_nav}>
                 <div className='container'>
                     <div className={styles.subpage_nav_container}>
@@ -32,79 +48,81 @@ export default function Iletisim() {
                     </div>
                 </div>
             </div>
-            <div className={styles.contact_title}>
-                <div className='container'>
-                    <h3>İletişim Bilgileri</h3>
+            <div style={isMobile ? { paddingLeft: '30px', paddingRight: '20px' } : null}>
+                <div className={styles.contact_title}>
+                    <div className='container'>
+                        <h3>İletişim Bilgileri</h3>
+                    </div>
                 </div>
-            </div>
 
-            <div className={styles.split_content}>
-                <div className={styles.contact_content}>
-                    <a target="_blank" href="https://www.google.com/maps/place/TERAP%C4%B0+YAZILIM/@40.222149,28.8527686,15.21z/data=!4m5!3m4!1s0x14ca0f265139d24f:0xeba5ffff10151b00!8m2!3d40.222595!4d28.858353"><img src='/img/map1.png' /></a>
-                    <div className={styles.contact_box}>
-                        <div className={styles.heading}>
-                            Merkez Ofis
+                <div className={styles.split_content}>
+
+                    <div className={styles.contact_content}>
+                        <NoSSR_IFrame_MAP src={maps[0].map0} />
+                        <div className={styles.contact_box}>
+                            <div className={styles.heading}>
+                                Merkez Ofis
                         </div>
-                        <div className={styles.split_box}>
-                            <div>
-                                <span className={styles.title}>
-                                    ADRES
+                            <div className={styles.split_box}>
+                                <div>
+                                    <span className={styles.title}>
+                                        ADRES
                                 </span>
-                                <p>
-                                    19 Mayıs Mah. Piyade Sk. No: 10 Nilüfer/Bursa
+                                    <p>
+                                        19 Mayıs Mah. Piyade Sk. No: 10 Nilüfer/Bursa
                                 </p>
-                            </div>
-                            <div>
-                                <span className={styles.title}>
-                                    TELEFON
+                                </div>
+                                <div>
+                                    <span className={styles.title}>
+                                        TELEFON
                                 </span>
-                                <span className={styles.phone}>
-                                    0 224 <strong>271 75 80</strong>
+                                    <span className={styles.phone}>
+                                        0 224 <strong>271 75 80</strong>
+                                    </span>
+                                    <span className={`${styles.title} ${styles.title_top}`}>
+                                        TELEFON 2
                                 </span>
-                                <span className={`${styles.title} ${styles.title_top}`}>
-                                    TELEFON 2
+                                    <span className={styles.phone}>
+                                        0 224 <strong>442 80 42</strong>
+                                    </span>
+                                    <span className={`${styles.title} ${styles.title_top}`}>
+                                        E-POSTA
                                 </span>
-                                <span className={styles.phone}>
-                                    0 224 <strong>442 80 42</strong>
-                                </span>
-                                <span className={`${styles.title} ${styles.title_top}`}>
-                                    E-POSTA
-                                </span>
-                                <a href="mailto:info@terapiyazilim.com">
-                                    info@terapiyazilim.com
+                                    <a href="mailto:info@terapiyazilim.com">
+                                        info@terapiyazilim.com
                                 </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={styles.contact_content}>
+                        <NoSSR_IFrame_MAP src={maps[0].map1} />
+                        <div className={`${styles.contact_box} ${styles.contact_box_left}`}>
+                            <div className={styles.heading}>
+                                Arge Ofis
+                        </div>
+                            <div className={styles.split_box}>
+                                <div>
+                                    <span className={styles.title}>
+                                        ADRES
+                                </span>
+                                    <p>
+                                        Ulutek Teknopark Yazılım Geliştirme Merkezi Ar-Ge Binası No:933 / 415 Nilüfer/Bursa
+                                </p>
+                                </div>
+                                <div>
+                                    <span className={`${styles.title} ${styles.title_top}`}>
+                                        E-POSTA
+                                </span>
+                                    <a href="mailto:info@terapiyazilim.com">
+                                        yazilim@terapiyazilim.com
+                                </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className={styles.contact_content}>
-                    <a target="_blank" href="https://www.google.com/maps/place/TERAP%C4%B0+YAZILIM/@40.222149,28.8527686,15.21z/data=!4m5!3m4!1s0x14ca0f265139d24f:0xeba5ffff10151b00!8m2!3d40.222595!4d28.858353"><img src='/img/map1.png' /></a>
-                    <div className={`${styles.contact_box} ${styles.contact_box_left}`}>
-                        <div className={styles.heading}>
-                            Arge Ofis
-                        </div>
-                        <div className={styles.split_box}>
-                            <div>
-                                <span className={styles.title}>
-                                    ADRES
-                                </span>
-                                <p>
-                                    Ulutek Teknopark Yazılım Geliştirme Merkezi Ar-Ge Binası No:933 / 415 Nilüfer/Bursa
-                                </p>
-                            </div>
-                            <div>
-                                <span className={`${styles.title} ${styles.title_top}`}>
-                                    E-POSTA
-                                </span>
-                                <a href="mailto:info@terapiyazilim.com">
-                                    yazilim@terapiyazilim.com
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
-
 
         </Layout >
     )

@@ -3,7 +3,6 @@
     width:100%;
     background-color:#0F192B;
     height:rem(575);
-    padding:rem(90) 0;
     background-image: url('/img/footerbg.svg');
     background-repeat: no-repeat;
     background-position:bottom -180px right -200px;
@@ -12,6 +11,11 @@
 .footer_wrapper {
     width:100%;
     display: flex;
+    background-image:url('/img/line.svg');
+    background-repeat: no-repeat;
+    background-position:top center;
+    background-size: contain;
+    padding:rem(90) 0;
 }
 
 .footer_left {
@@ -87,7 +91,7 @@
 .adress_block {
     text-align: right;
     color:white;
-    font-size:rem(13);
+    font-size:rem(14);
     margin-bottom:rem(30);
     span {
         font-weight:600;

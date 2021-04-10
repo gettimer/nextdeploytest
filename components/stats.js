@@ -13,11 +13,11 @@ export default function Stats() {
                 </div>
                 <div className={styles.stats_block}>
                     <h4>128+</h4>
-                    <p>Tamamlanmış Proje</p>
+                    <p>Tamamlanmış <br />Proje</p>
                 </div>
                 <div className={styles.stats_block}>
                     <h4>12000+</h4>
-                    <p>Saat Yazılım Geliştirme</p>
+                    <p>Saat Yazılım <br />Geliştirme</p>
                 </div>
                 <div className={styles.stats_block}>
                     <h4>59+</h4>

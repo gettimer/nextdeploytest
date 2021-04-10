@@ -1,13 +1,416 @@
 import React from 'react'
 const { useState, useEffect, useRef, useCallback } = React;
+
 import Head from 'next/head'
 import Link from 'next/link'
 import Layout from '../../components/layout'
 import styles from '../../styles/pages/contact.module.scss'
 
+import Select from 'react-select'
+
+const options = [
+    {
+        "value": "BURDUR",
+        "label": "BURDUR"
+    },
+    {
+        "value": "ESKİŞEHİR",
+        "label": "ESKİŞEHİR"
+    },
+    {
+        "value": "ÇANKIRI",
+        "label": "ÇANKIRI"
+    },
+    {
+        "value": "OSMANİYE",
+        "label": "OSMANİYE"
+    },
+    {
+        "value": "KOCAELİ",
+        "label": "KOCAELİ"
+    },
+    {
+        "value": "GAZİANTEP",
+        "label": "GAZİANTEP"
+    },
+    {
+        "value": "HATAY",
+        "label": "HATAY"
+    },
+    {
+        "value": "KAYSERİ",
+        "label": "KAYSERİ"
+    },
+    {
+        "value": "GÜMÜŞHANE",
+        "label": "GÜMÜŞHANE"
+    },
+    {
+        "value": "SAKARYA",
+        "label": "SAKARYA"
+    },
+    {
+        "value": "BURSA",
+        "label": "BURSA"
+    },
+    {
+        "value": "BAYBURT",
+        "label": "BAYBURT"
+    },
+    {
+        "value": "ÇANAKKALE",
+        "label": "ÇANAKKALE"
+    },
+    {
+        "value": "SİNOP",
+        "label": "SİNOP"
+    },
+    {
+        "value": "BARTIN",
+        "label": "BARTIN"
+    },
+    {
+        "value": "MAĞUSA (KIBRIS)",
+        "label": "MAĞUSA (KIBRIS)"
+    },
+    {
+        "value": "MERSİN",
+        "label": "MERSİN"
+    },
+    {
+        "value": "NİĞDE",
+        "label": "NİĞDE"
+    },
+    {
+        "value": "KONYA",
+        "label": "KONYA"
+    },
+    {
+        "value": "TOKAT",
+        "label": "TOKAT"
+    },
+    {
+        "value": "ADIYAMAN",
+        "label": "ADIYAMAN"
+    },
+    {
+        "value": "ANKARA",
+        "label": "ANKARA"
+    },
+    {
+        "value": "YOZGAT",
+        "label": "YOZGAT"
+    },
+    {
+        "value": "ORDU",
+        "label": "ORDU"
+    },
+    {
+        "value": "RİZE",
+        "label": "RİZE"
+    },
+    {
+        "value": "ADANA",
+        "label": "ADANA"
+    },
+    {
+        "value": "KIRŞEHİR",
+        "label": "KIRŞEHİR"
+    },
+    {
+        "value": "IĞDIR",
+        "label": "IĞDIR"
+    },
+    {
+        "value": "MANİSA",
+        "label": "MANİSA"
+    },
+    {
+        "value": "DİYARBAKIR",
+        "label": "DİYARBAKIR"
+    },
+    {
+        "value": "UŞAK",
+        "label": "UŞAK"
+    },
+    {
+        "value": "LEFKOŞE (KIBRIS)",
+        "label": "LEFKOŞE (KIBRIS)"
+    },
+    {
+        "value": "AMASYA",
+        "label": "AMASYA"
+    },
+    {
+        "value": "ERZİNCAN",
+        "label": "ERZİNCAN"
+    },
+    {
+        "value": "ISPARTA",
+        "label": "ISPARTA"
+    },
+    {
+        "value": "GİRNE (KIBRIS)",
+        "label": "GİRNE (KIBRIS)"
+    },
+    {
+        "value": "ELAZIĞ",
+        "label": "ELAZIĞ"
+    },
+    {
+        "value": "KARABÜK",
+        "label": "KARABÜK"
+    },
+    {
+        "value": "HAKKARİ",
+        "label": "HAKKARİ"
+    },
+    {
+        "value": "KARS",
+        "label": "KARS"
+    },
+    {
+        "value": "ZONGULDAK",
+        "label": "ZONGULDAK"
+    },
+    {
+        "value": "AKSARAY",
+        "label": "AKSARAY"
+    },
+    {
+        "value": "MALATYA",
+        "label": "MALATYA"
+    },
+    {
+        "value": "BALIKESİR",
+        "label": "BALIKESİR"
+    },
+    {
+        "value": "DENİZLİ",
+        "label": "DENİZLİ"
+    },
+    {
+        "value": "MUŞ",
+        "label": "MUŞ"
+    },
+    {
+        "value": "ŞIRNAK",
+        "label": "ŞIRNAK"
+    },
+    {
+        "value": "MUĞLA",
+        "label": "MUĞLA"
+    },
+    {
+        "value": "TEKİRDAĞ",
+        "label": "TEKİRDAĞ"
+    },
+    {
+        "value": "KIRKLARELİ",
+        "label": "KIRKLARELİ"
+    },
+    {
+        "value": "SİİRT",
+        "label": "SİİRT"
+    },
+    {
+        "value": "GİRESUN",
+        "label": "GİRESUN"
+    },
+    {
+        "value": "ŞANLIURFA",
+        "label": "ŞANLIURFA"
+    },
+    {
+        "value": "AYDIN",
+        "label": "AYDIN"
+    },
+    {
+        "value": "BATMAN",
+        "label": "BATMAN"
+    },
+    {
+        "value": "BİTLİS",
+        "label": "BİTLİS"
+    },
+    {
+        "value": "AFYONKARAHİSAR",
+        "label": "AFYONKARAHİSAR"
+    },
+    {
+        "value": "ARTVİN",
+        "label": "ARTVİN"
+    },
+    {
+        "value": "AĞRI",
+        "label": "AĞRI"
+    },
+    {
+        "value": "YALOVA",
+        "label": "YALOVA"
+    },
+    {
+        "value": "NEVŞEHİR",
+        "label": "NEVŞEHİR"
+    },
+    {
+        "value": "TRABZON",
+        "label": "TRABZON"
+    },
+    {
+        "value": "SİVAS",
+        "label": "SİVAS"
+    },
+    {
+        "value": "ANTALYA",
+        "label": "ANTALYA"
+    },
+    {
+        "value": "KASTAMONU",
+        "label": "KASTAMONU"
+    },
+    {
+        "value": "MARDİN",
+        "label": "MARDİN"
+    },
+    {
+        "value": "KAHRAMANMARAŞ",
+        "label": "KAHRAMANMARAŞ"
+    },
+    {
+        "value": "ERZURUM",
+        "label": "ERZURUM"
+    },
+    {
+        "value": "ARDAHAN",
+        "label": "ARDAHAN"
+    },
+    {
+        "value": "DÜZCE",
+        "label": "DÜZCE"
+    },
+    {
+        "value": "SAMSUN",
+        "label": "SAMSUN"
+    },
+    {
+        "value": "ÇORUM",
+        "label": "ÇORUM"
+    },
+    {
+        "value": "VAN",
+        "label": "VAN"
+    },
+    {
+        "value": "BOLU",
+        "label": "BOLU"
+    },
+    {
+        "value": "KÜTAHYA",
+        "label": "KÜTAHYA"
+    },
+    {
+        "value": "BİLECİK",
+        "label": "BİLECİK"
+    },
+    {
+        "value": "İSTANBUL",
+        "label": "İSTANBUL"
+    },
+    {
+        "value": "KİLİS",
+        "label": "KİLİS"
+    },
+    {
+        "value": "TUNCELİ",
+        "label": "TUNCELİ"
+    },
+    {
+        "value": "BİNGÖL",
+        "label": "BİNGÖL"
+    },
+    {
+        "value": "EDİRNE",
+        "label": "EDİRNE"
+    },
+    {
+        "value": "KIRIKKALE",
+        "label": "KIRIKKALE"
+    },
+    {
+        "value": "KARAMAN",
+        "label": "KARAMAN"
+    },
+    {
+        "value": "İZMİR",
+        "label": "İZMİR"
+    }
+]
+const customStyles = {
+    control: (provided, state) => ({
+        ...provided,
+        background: '#fff',
+        borderWidth: '2px',
+        borderRadius: '0px',
+        borderColor: 'rgba(119, 123, 134, 0.5)',
+        borderLeft: '0px',
+        borderRight: '0px',
+        borderTop: '0px',
+        minHeight: '47px',
+        height: '47px',
+        boxShadow: state.isFocused ? null : null,
+    }),
+
+    valueContainer: (provided, state) => ({
+        ...provided,
+        height: '47px',
+        padding: '0 0',
+        fontSize: '14px'
+    }),
+
+    input: (provided, state) => ({
+        ...provided,
+        margin: '0px',
+    }),
+    indicatorSeparator: state => ({
+        display: 'none',
+    }),
+    indicatorsContainer: (provided, state) => ({
+        ...provided,
+        height: '47px',
+    }),
+    option: (styles, { isDisabled, isFocused }) => {
+        return {
+            ...styles,
+            color: isDisabled ? '#e1e2e3' : 'black',
+            cursor: isDisabled ? 'not-allowed' : 'default',
+            backgroundColor: isFocused ? "rgba(211, 217, 220,1)" : null,
+            fontSize: '12px'
+        };
+    },
+    multiValue: (provided, state) => ({
+        ...provided,
+        backgroundColor: 'var(--lightbluegray)',
+        color: 'white',
+        padding: '5px'
+    }),
+    multiValueLabel: (provided, state) => ({
+        ...provided,
+        color: 'white'
+    }),
+    multiValueRemove: (provided, state) => ({
+        ...provided,
+        cursor: 'pointer'
+    }),
+    placeholder: (provided, state) => ({
+        ...provided,
+        color: '#0F192B'
+    })
+};
+
+
 
 export default function Iletisim() {
-
 
     return (
         <Layout>
@@ -39,8 +442,8 @@ export default function Iletisim() {
                 <div className='container'>
                     <div className={styles.form_layout}>
                         <div className={styles.form_content}>
-                            <div className={styles.contact_title}>
-                                <h3>İletişim Bilgileri</h3>
+                            <div className={`${styles.contact_title} ${styles.contact_title_p0}`}>
+                                <h3>Sizi Arayalım</h3>
                             </div>
                             <p className={styles.form_desc}>
                                 Devir işlemleri en fazla 2 kez yapılabilecektir. (Kart veya rakam devri farketmeksizin) 3. veya daha sonraki devir talepleriniz ayrıca ücretlendirilecektir.
@@ -53,90 +456,7 @@ export default function Iletisim() {
                                     <small>Lüften çalıştığınız ya da sahibi olduğunuz firma ismini yazınız</small>
                                 </div>
                                 <div className={styles.field_select}>
-                                    <select>
-                                        <option value="Adana">İL SEÇİNİZ</option>
-                                        <option value="Adana">Adana</option>
-                                        <option value="Adiyaman">Adiyaman</option>
-                                        <option value="Afyonkarahisar">Afyonkarahisar</option>
-                                        <option value="Agri">Agri</option>
-                                        <option value="Aksaray">Aksaray</option>
-                                        <option value="Amasya">Amasya</option>
-                                        <option value="Ankara">Ankara</option>
-                                        <option value="Antalya">Antalya</option>
-                                        <option value="Ardahan">Ardahan</option>
-                                        <option value="Artvin">Artvin</option>
-                                        <option value="Aydin">Aydin</option>
-                                        <option value="Balikesir">Balikesir</option>
-                                        <option value="Bartin">Bartin</option>
-                                        <option value="Batman">Batman</option>
-                                        <option value="Bayburt">Bayburt</option>
-                                        <option value="Bilecik">Bilecik</option>
-                                        <option value="Bingol">Bingol</option>
-                                        <option value="Bitlis">Bitlis</option>
-                                        <option value="Bolu">Bolu</option>
-                                        <option value="Burdur">Burdur</option>
-                                        <option value="Bursa">Bursa</option>
-                                        <option value="Canakkale">Canakkale</option>
-                                        <option value="Cankiri">Cankiri</option>
-                                        <option value="Corum">Corum</option>
-                                        <option value="Denizli">Denizli</option>
-                                        <option value="Diyarbakir">Diyarbakir</option>
-                                        <option value="Duzce">Duzce</option>
-                                        <option value="Edirne">Edirne</option>
-                                        <option value="Elazig">Elazig</option>
-                                        <option value="Erzincan">Erzincan</option>
-                                        <option value="Erzurum">Erzurum</option>
-                                        <option value="Eskisehir">Eskisehir</option>
-                                        <option value="Gaziantep">Gaziantep</option>
-                                        <option value="Giresun">Giresun</option>
-                                        <option value="Gumushane">Gumushane</option>
-                                        <option value="Hakkari">Hakkari</option>
-                                        <option value="Hatay">Hatay</option>
-                                        <option value="Igdir">Igdir</option>
-                                        <option value="Isparta">Isparta</option>
-                                        <option value="Istanbul">Istanbul</option>
-                                        <option value="Izmir">Izmir</option>
-                                        <option value="Kahramanmaras">Kahramanmaras</option>
-                                        <option value="Karabuk">Karabuk</option>
-                                        <option value="Karaman">Karaman</option>
-                                        <option value="Kars">Kars</option>
-                                        <option value="Kastamonu">Kastamonu</option>
-                                        <option value="Kayseri">Kayseri</option>
-                                        <option value="Kilis">Kilis</option>
-                                        <option value="Kirikkale">Kirikkale</option>
-                                        <option value="Kirklareli">Kirklareli</option>
-                                        <option value="Kirsehir">Kirsehir</option>
-                                        <option value="Kocaeli">Kocaeli</option>
-                                        <option value="Konya">Konya</option>
-                                        <option value="Kutahya">Kutahya</option>
-                                        <option value="Malatya">Malatya</option>
-                                        <option value="Manisa">Manisa</option>
-                                        <option value="Mardin">Mardin</option>
-                                        <option value="Mersin">Mersin</option>
-                                        <option value="Mugla">Mugla</option>
-                                        <option value="Mus">Mus</option>
-                                        <option value="Nevsehir">Nevsehir</option>
-                                        <option value="Nigde">Nigde</option>
-                                        <option value="Ordu">Ordu</option>
-                                        <option value="Osmaniye">Osmaniye</option>
-                                        <option value="Rize">Rize</option>
-                                        <option value="Sakarya">Sakarya</option>
-                                        <option value="Samsun">Samsun</option>
-                                        <option value="Sanliurfa">Sanliurfa</option>
-                                        <option value="Siirt">Siirt</option>
-                                        <option value="Sinop">Sinop</option>
-                                        <option value="Sirnak">Sirnak</option>
-                                        <option value="Sivas">Sivas</option>
-                                        <option value="Tekirdag">Tekirdag</option>
-                                        <option value="Tokat">Tokat</option>
-                                        <option value="Trabzon">Trabzon</option>
-                                        <option value="Tunceli">Tunceli</option>
-                                        <option value="Usak">Usak</option>
-                                        <option value="Van">Van</option>
-                                        <option value="Yalova">Yalova</option>
-                                        <option value="Yozgat">Yozgat</option>
-                                        <option value="Zonguldak">Zonguldak</option>
-                                    </select>
+                                    <Select options={options} styles={customStyles} placeholder={'İL SEÇİNİZ'} />
                                 </div>
                                 <div className={styles.field}>
                                     <input className={styles.field__input} type="text" placeholder="Adınız Soyadınız" />
@@ -160,7 +480,7 @@ export default function Iletisim() {
 
                         </div>
                         <div className={styles.form_selection}>
-                            <div className={styles.contact_title}>
+                            <div className={`${styles.contact_title} ${styles.contact_title_p0}`}>
                                 <h3>Formlar</h3>
                             </div>
                             <p>Lütfen iletişim kurmak istediğiniz konu ile ilgili formu seçiniz.</p>
@@ -198,10 +518,6 @@ export default function Iletisim() {
                     </div>
                 </div>
             </div>
-
-
-
-
 
         </Layout>
     )

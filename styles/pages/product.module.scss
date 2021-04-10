@@ -238,4 +238,30 @@
             }
         }
     }
+    .video_link {
+            top:rem(-110);
+            right:initial;
+            left:50%;
+            transform:translateX(-50%);
+            color:white;
+            svg {
+                width:rem(20);
+                margin-right:rem(10);
+                g {
+                    path {
+                        fill : white;
+                    }
+                }
+            }
+        }
+
+        .document_list {
+            a {
+                color: #0F192B;
+                display:flex;
+                margin-right:0;
+                text-decoration: none;
+                margin-bottom:rem(10);
+            }
+        }
 }

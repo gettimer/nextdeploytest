@@ -211,4 +211,41 @@
   background-color:#F79A42;
 }
 
+
+@media (max-width: 991.98px) { 
+
+    .story {
+    
+        align-items: flex-start;
+        flex-direction: column-reverse;
+        padding:0 rem(20);
+    }
+
+.story_picture_block {
+    width:100%;
+}
+.story_content_block {
+    width:100%;
+    padding-right:0;
+    img {
+        margin-top:rem(40);
+    }
+    
+}
+
+.picture_relative {
+    margin-top:rem(40);
+    width:100%;
+    position:relative;
+    
+}
+
+.testimonials_list {
+    
+    padding:rem(70) rem(20);
+    
+}
+
+}
+
  

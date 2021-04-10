@@ -50,4 +50,19 @@
     }
 }
 
+@media (max-width: 991.98px) { 
 
+    .references {
+        padding:0 rem(30);
+
+    .ref_grid {
+        width:100%;
+
+        .ref {
+            width:100%;
+            
+        }
+    }
+}
+
+}

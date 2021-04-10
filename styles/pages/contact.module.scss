@@ -64,13 +64,19 @@
         width:49%;
         padding-bottom:rem(400);
         position:relative;
+
+        iframe {
+            width:100%;
+            height:rem(400);
+        }
+
         .contact_box {
             width:80%;
             height:rem(350);
             background-color:#F8F8F9;
             position:absolute;
             right:0;
-            top:rem(350);
+            top:rem(320);
             padding:rem(20) rem(30) rem(40);
 
             &:after {
@@ -248,4 +254,114 @@
             }
         }
     }
+}
+
+@media (max-width: 991.98px) { 
+
+.subpage_horizontal_nav {
+   padding:0 rem(20);
+}
+
+.contact_title {
+    
+}
+
+.split_content {
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction:column;
+    //padding:rem(20);
+
+    .contact_content {
+        width:100%;
+        padding-bottom:rem(300);
+        position:relative;
+
+        iframe {
+            width:100%;
+            height:rem(400);
+        }
+
+        .contact_box {
+            width:100%;
+            height:rem(350);
+            background-color:#F8F8F9;
+            position:absolute;
+            right:0;
+            top:rem(320);
+            padding:rem(20) rem(30) rem(40);
+
+            &:after {
+                content:"";
+                width:rem(128);
+                height:rem(5);
+                background-color:#F79A42;
+                position:absolute;
+                top:0;
+                left:rem(30);
+            }
+
+            &_left {
+                right:initial;
+                left:0;
+                
+            }
+
+            .heading {
+                padding:rem(15) 0;
+                font-family: 'Gilroy-Bold';
+                font-size:rem(24);
+                border-bottom:rem(1) solid rgba(#777B86,.2);
+            }
+
+            .split_box {
+                width:100%;
+                display:flex;
+                justify-content: space-between;
+                margin-top:rem(20);
+                div {
+                    width:46%;
+                    .title {
+                        color:#3B64B2;
+                        font-size:rem(10);
+                        letter-spacing: 3.3px;
+                        display:block;
+                        padding-bottom:rem(15);
+                        &_top {
+                            margin-top:rem(20);
+                        }
+                    }
+                    p {
+                        opacity:.7;
+                        font-size:rem(14);
+                        line-height:rem(26);
+                    }
+                    a {
+                        color:#0F192B;
+                        font-size:rem(13);
+
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+.form_layout {
+    width:100%;
+    display:flex;
+    justify-content: flex-start;
+    flex-direction:column;
+    margin-bottom: rem(100);
+    padding:rem(20);
+    .form_content {
+        width:100%;
+    }
+    .form_selection {
+        width:100%;
+        margin-top:rem(40);
+    }
+
+}
 }
