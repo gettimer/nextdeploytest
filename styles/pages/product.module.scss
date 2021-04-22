@@ -244,6 +244,7 @@
             left:50%;
             transform:translateX(-50%);
             color:white;
+            z-index: -1;
             svg {
                 width:rem(20);
                 margin-right:rem(10);
