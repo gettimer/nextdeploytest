@@ -13,7 +13,7 @@ export default function Hizmetler() {
         <Layout>
 
             <Head>
-                <title>Terapi Yazılım - Eğitim Hizmetleri</title>
+                <title>Terapi Yazılım - Proje Yönetimi</title>
                 <meta name="keywords" content="" />
                 <meta name="description" content="" />
                 <link rel="icon" href="/favicon.ico" />
@@ -21,11 +21,11 @@ export default function Hizmetler() {
 
             <div className={styles.subpage_header}>
                 <div className={styles.header_content}>
-                    <h1>Eğitim Hizmetleri</h1>
+                    <h1>Proje Yönetimi</h1>
                     <div className={styles.breadcrumb}>
                         <Link href='/'><a>anasayfa</a></Link>
                         <Link href=''><a>hizmetler</a></Link>
-                        <Link href=''><a>eğitim hizmetleri</a></Link>
+                        <Link href=''><a>proje yönetimi</a></Link>
                     </div>
                 </div>
                 <img src='/img/producttop.jpg' />
@@ -35,20 +35,19 @@ export default function Hizmetler() {
                 <div className={styles.subpage_horizontal_nav}>
                     <div className='container'>
                         <div className={styles.subpage_nav_container}>
-                            <Link href='/hizmetler/egitim'><a className={styles.active}>Eğitim Hizmetleri</a></Link>
+                            <Link href='/hizmetler/egitim'><a>Eğitim Hizmetleri</a></Link>
                             <Link href='/hizmetler/destek'><a>Destek Hizmetleri</a></Link>
                             <Link href='/hizmetler/danismanlik'><a>Danışmanlık Hizmetleri</a></Link>
                             <Link href='/hizmetler/ozel-yazilim'><a>Yazılım Hizmetleri</a></Link>
-                            <Link href='/hizmetler/proje-yonetimi'><a>Proje Yönetimi</a></Link>
+                            <Link href='/hizmetler/proje-yonetimi'><a className={styles.active}>Proje Yönetimi</a></Link>
                         </div>
                     </div>
                 </div> : null}
             <div className='container'>
                 <div className={styles.split_content_view}>
                     <div className={styles.content}>
-                        <h3>Eğitim Hizmetlerimiz İle Yanınızdayız...</h3>
-                        <p>Terapi Yazılım, deneyimli ve konusunda uzman sertifikalı kadrosuyla iş ortaklarının, bilgi altyapılarında meydana gelen sorun ve ihtiyaçlara anında çözüm geliştirmek amacıyla geniş bir yelpazede eğitim hizmetleri sunmaktadır.</p>
-                        <p>Kurumsal ve bireysel eğitimler ile iş ortaklarının program bilgilerini analiz ederek en verimli şekilde kullanmalarına olanak sağlamaktadır.</p>                        
+                        <h3>Proje Yönetimi Hizmeti İle Yanınızdayız...</h3>
+                        <p>İçerik</p>
                     </div>
                     <div className={styles.media}>
                         <img src='/img/about.jpg' />
@@ -56,7 +55,8 @@ export default function Hizmetler() {
                 </div>
 
             </div>
-            
+
+
         </Layout>
     )
 }

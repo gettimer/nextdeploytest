@@ -44,8 +44,9 @@ export default function Product({ prod, category_id }) {
 
                         <div className={styles.vert_nav}>
                             <ul>
-                                {products.map((ele, index) =>
+                                {products.map((ele, index) =>                                
                                     <li key={ele.category_id}>
+                                        <img src="/img/navicons/kobi.svg" />
                                         <a className={ele.category_id === parseFloat(category_id) ? `${styles.active}` : null} onClick={() => openSubState === ele.category_id ? setOpenSubState(null) : setOpenSubState(ele.category_id)}>{ele.category}</a>
                                         {openSubState === ele.category_id ?
                                             <ul>

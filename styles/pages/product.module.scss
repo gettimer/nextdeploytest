@@ -32,10 +32,16 @@
                 }
             }
 
+            img {
+                max-height: 13px;
+                padding-right:5px !important;
+            }
+
             ul {
                 li {
                     border-bottom:0 !important;
                     padding:0 !important;
+                    padding-left: 23px !important;
                     a {
                         font-size:rem(12);
                         color:#777B86;

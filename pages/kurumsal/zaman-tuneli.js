@@ -48,13 +48,13 @@ export default function Hakkimizda() {
                                     </svg>
                                 </div>
                                 <div className={styles.desc}>
-                                    <span>Kuruluş</span>
-                                    Kurumların iş süreçlerindeki ihtiyaç duydukları uygulamalara çözüm üretme ilkesiyle, iş dünyasına atılmıştır.
+                                    <strong>16 Kasım tarihinde "Değişimi başlatır, geleceğe taşır" sloganıyla faaliyetlerimize başladık.</strong><br />
+                                    <small>Yıl içinde 13.910 Dk. / 94 Farklı çağrı ile servis hizmeti sağlandı.</small>
                                 </div>
                             </div>
                             <div className={styles.item}>
                                 <div className={styles.year}>
-                                    <span> 2014</span>
+                                    <span> 2013</span>
                                     <svg width="86px" height="79px" viewBox="0 0 86 79" version="1.1">
                                         <g id="Group-255" transform="translate(0.000000, -174.000000)" fill="#D3D3D3">
                                             <path d="M86.0061812,213.202899 C86.0112522,229.323991 76.9965952,244.092972 62.6561812,251.457899 C58.9899182,253.334364 54.5085304,252.357254 51.9561812,249.124899 C49.7909889,246.388068 46.4929236,244.791896 43.0031812,244.791896 C39.5134387,244.791896 36.2153735,246.388068 34.0501812,249.124899 C31.4978319,252.357254 27.0164442,253.334364 23.3501812,251.457899 C9.01325762,244.089189 0,229.322615 0,213.202899 C0,197.083182 9.01325762,182.316609 23.3501812,174.947899 C27.0164442,173.071434 31.4978319,174.048544 34.0501812,177.280899 C36.2153735,180.01773 39.5134387,181.613902 43.0031812,181.613902 C46.4929236,181.613902 49.7909889,180.01773 51.9561812,177.280899 C54.5085304,174.048544 58.9899182,173.071434 62.6561812,174.947899 C76.9965952,182.312826 86.0112522,197.081807 86.0061812,213.202899 Z" id="Path"></path>
@@ -62,8 +62,11 @@ export default function Hakkimizda() {
                                     </svg>
                                 </div>
                                 <div className={styles.desc}>
-                                    <span>X Projesi</span>
-                                    İlk büyük projemiz olan x projesi faaliyete geçti.
+                                <strong>Logo Yazılım ailesine, Kobi & Kurumsal İş Ortağı aynı zamanda Logo Çözüm Ortağı ünvanı ile katıldık.</strong><br />
+                                <strong>7 şehirde destek faaliyetlerimizi sürdürdük.</strong><br />
+                                <strong>Kalıcı çözümler üretmek için, yazılım departmanımızı kurduk.</strong><br />
+                                <strong>Türkiye' nin ilk J-Platformunda İK projesi gerçekleştirdik.</strong><br />
+                                    <small>Yıl içinde 255.069 Dk. / 2.285 Farklı çağrı ile servis hizmeti sağlandı.</small>
                                 </div>
                             </div>
                             <div className={styles.item}>
