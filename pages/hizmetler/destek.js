@@ -46,19 +46,21 @@ export default function Hizmetler() {
             <div className='container'>
                 <div className={styles.split_content_view}>
                     <div className={styles.content}>
-                        <h3>Destek Hizmetlerimiz İle Yanınızdayız...</h3>
-                        <p>Siz de ürünlerinizle ilgili teknik destek almak için 0(224) 271 75 80 numaralı Teknik Destek Hattımızı arayabilirsiniz.</p>
-                        <p><strong>Vermekte Olduğumuz Hizmetler:  </strong></p>
-                        <p>Mali dönem devir işlemleri</p>
-                        <p>Proje Danışmanlığı</p>
-                        <p>Logo Destek (Teledestek, Yerinde Destek, Uzak Erişim)</p>
-                        <p>Kurumsal ve Bireysel Eğitimler</p>
-                        <p>Özel Çözümler (İşlem Kolaylığı, İş Pratikliği)</p>
-                        <p>Raporlama Çözümleri</p>
-                        <p>Veri Bakımı ve Güvenliği</p>
+                        <h3>Destek Hizmetleri</h3>
+                        <p><strong>Logo Destek Hizmetlerimiz;</strong></p>
+                        <p>Destek hizmetimizin amacı; kurulan Logo sisteminin güvenliğini ve sürekliliğini periyodik sistem denetimi ile sağlamak, ayrıca zaman içerisinde değişen ihtiyaçlara göre sistemin yeniden yapılandırılmasıdır.</p>
+                        <p>Terapi Yazılım tarafından geliştirilmiş kurumsal yazılım ürünleri için destek hizmeti; 15 yılı aşkın Logo Yazılım tecrübesine sahip Terapi Yazılım’ın, sertifikalı ve alanında uzman olan Logo Destek Ekibi tarafından verilmektedir. Logo Yazılım ve Terapi Yazılım ürünleri için kullanıcılarına verilen destek hizmet içeriği, kullanıcıların talep ve ihtiyaçlarına göre belirlenmektedir. Belirlenen hizmet paketinin içerisinde; telefon destek, uzaktan destek, yerinde destek ve proje hizmet kalemleri bulunmaktadır.</p>
+                        <p><strong>Tele Destek Hizmeti;</strong></p>
+                        <p>Terapi Yazılım’ın bakım anlaşmalı müşterileri için uyguladığı Tele destek hizmeti ile müşteriler telefon veya “destek@terapiyazilim.com” e-mail adresinden destek taleplerini iletebilmektedir. Destek talebi destek havuzundaki ilk müsait destek uzmanı tarafından yanıtlanmaktadır. Böylece müşteri talepleri Terapi Yazılım tarafından en kısa sürede karşılanmakta ve hizmet süreçleri detaylı olarak raporlanabilmektedir. Tele destek hizmeti bütün anlaşmalarımızda mevcuttur. </p>
+                        <p><strong>Uzaktan Destek Hizmeti</strong></p>
+                        <p>Logo Yazılım ve Terapi Yazılım tarafından geliştirilmiş kurumsal yazılım ürünleri için uzaktan destek hizmeti; bakım anlaşmalı müşterilerimizin taleplerini, uzak bağlantı programları ile erişim sağlayarak karşılamaktayız.</p>
+                        <p><strong>Yerinde Destek Hizmeti</strong></p>
+                        <p>Anlaşmalı müşterilerimiz için, talepleri doğrultusunda faaliyet gösterdikleri adreslere periyodik yerinde destek hizmeti vermekteyiz. Diğer anlaşmaların içine dahil edilerek desteğin kesintisiz devam etmesi sağlanıyor.</p>
+                        <p><strong>Proje Destek Hizmeti</strong></p>
+                        <p>Yeni satış, yeniden yapılandırma, üretim veya dönüşüm süreçlerinde projeler anahtar teslim şeklinde uzmanlarımızca başlatılıp canlı geçişle teslim edilmektedir.</p>
                     </div>
                     <div className={styles.media}>
-                        <img src='/img/about.jpg' />
+                        <img src='/img/services/support.jpg' className={styles.pl_pr_60} />
                     </div>
                 </div>
 

@@ -46,11 +46,30 @@ export default function Hizmetler() {
             <div className='container'>
                 <div className={styles.split_content_view}>
                     <div className={styles.content}>
-                        <h3>Proje Yönetimi Hizmeti İle Yanınızdayız...</h3>
-                        <p>İçerik</p>
+                        <h3>Proje Yönetimi</h3>
+                        <p>Terapi tamamlanan sayısız projesinde uzman kadrosu ile Türkiye’nin 30’dan fazla ilinde proje geliştirmiştir.</p>
+                        <p>Terapi projelerin başından sonuna kadar projenin beg/end date’lerinin ve planlanan maliyetlerle gerçekleşmesi konusunda hassasiyet göstermektedir. Alt yapının ve projeyi kullanan kullanıcıların eğitimlerini ve taleplerini en iyi şekilde tamamlamaktadır. Projenin başlangıcında işin köşelerini belirleyerek sonradan çıkabilecek olumsuzlukları öngörmektedir.</p>
+                        <p>Terapi, ERP projelerinde LOGO yazılımın ürünlerini kullanmaktadır. </p>
+
+                        <h2>ERP projelerinin aşamaları</h2>
+                        <p><strong>Fazlara bölme</strong></p>
+                        <p>Fazlara bölme aşaması, taleplerin ve ihtiyaçların belirlenmesi, yol haritasının çıkartılması için gerekli olan en önemli süreçtir. Analiz sürecinde standart olarak çözülecek başlıklar, uyarlama ile çözülecek konular, müdahale edilmesi gereken ihtiyaçlara göre geliştirilecek özel yazılımların köşeleri belirlenerek analiz yapılır.</p>
+
+                        <p><strong>Gelişim</strong></p>
+                        <p>Gelişim aşaması, faz bölme çalışması yapıldıktan sonra belirlenen ihtiyaçların ERP yazılımı ve özel çözümlerinin geliştirilip, bütünleşik iş yönetimine döndüğü bölümdür. Terapi proje yöneticileri ile işletmedeki proje sorumlularının aksiyon sürecidir. Yazılı örneklemeler önem taşımaktadır.</p>
+
+                        <p><strong>Kullanıcı Eğitimleri</strong></p>
+                        <p>Faz bölme ve gelişim süreçlerinin tamamlanmasını takiben, işletme proje sorumlusu eşliğinde kullanıcılar, uygulamaya yönelik detay eğitime alınır. Client kurulumu öncesinde yapılacak eğitimlere, projede aktif görev alacak proje ekibi dışında, yöneticilerin katılması, ortak dilin belirlenmesi açısından önem taşımaktadır.</p>
+
+                        <p><strong>Client Kurulum</strong></p>
+                        <p>Kullanıcı eğitimleri tamamlandıktan sonra, Client kurulum aşamasına geçilir. ERP üzerinde standart koşulları tanımlanır. Sürece hızlı bir şekilde geçilmesi için kullanıcı üzerindeki tanımların aktarımları hızlı bir şekilde tamamlanır.</p>
+
+                        <p><strong>Canlıya Geçiş</strong></p>
+                        <p>Proje kapsamında ERP ürününün kullanıma alındığı süreçtir. Bu süreçte proje ekipleri yine ortak çalışarak günlük iş akışının sistem üzerindeki denemelerini ve düzenlemeleri tamamlamış olurlar.</p>
+
                     </div>
                     <div className={styles.media}>
-                        <img src='/img/about.jpg' />
+                        <img src='/img/services/project.jpg' className={styles.pl_pr_60} />
                     </div>
                 </div>
 

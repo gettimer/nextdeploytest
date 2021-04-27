@@ -46,11 +46,19 @@ export default function Hizmetler() {
             <div className='container'>
                 <div className={styles.split_content_view}>
                     <div className={styles.content}>
-                        <h3>Özel Yazılımlarımız İle Yanınızdayız...</h3>
-                        <p>Yazılımda Sertifikalı Personellerimizle İhtiyacınıza Özel Yazılımlarla En etkili ve hızlı biçimde işinizi yapmanızı sağlıyoruz…</p>
+                        <h3>Yazılım Hizmetleri</h3>                        
+                        <p><strong>Ön analiz ve Geliştirme</strong></p>
+                        <p>Ön analiz çalışması sonucunda işletmelerin ortaya çıkan ihtiyaçları uygulama-yazılım geliştirme kapsamında yapılmaktadır.</p>
+                        <p>Uygulama-yazılım geliştirme dışında kalan ihtiyaçlar ise bütünleşik entegre projeleri dahilinde güncel teknolojileri kullanarak çözümlenir. İşletmelerin iş süreçleri analiz edildikten sonra veri tabanı, uygulama geliştirme araçları, uygulama yazılımları, eğitimler ve entegrasyon hizmetleri bir bütün olarak verilir.</p>
+                        <p><strong>Yazılım, Tasarım ve Geliştirme</strong></p>
+                        <p>Standart ERP yazılımları, gelişmekte olan firmaların ihtiyacını karşılamaya yetmez. Mutlaka terzi işi sektörel çözümler geliştirilmelidir. İşletmelerin ihtiyaçları, kullanıcılara ve bulundukları sektöre göre farklılık göstermektedir. </p>
+                        <p>Öz cümlede ek yazılım ve uyarlama gereksinimi ortaya çıkmaktadır. İşletmelerin ihtiyaçları, uzman kadromuz tarafından tespit edilip, platform ve yazılım teknolojisine karar verilir. Sürecin değişkenliğine zaman içerisinde çıkan yeni taleplere cevap verilecek şekilde çözümler sağlanır. </p>
+                        <p><strong>Yazılım Lisanslama</strong></p>
+                        <p>Terapi, ARGE ofisinde geliştirmiş olduğu özel çözümlerin yanı sıra Logo yazılımın Kobi, Kurumsal ve J-Platformundaki ürünlerin hizmetlerini de sunmaktadır. </p>
+                        <p>Terapi, işletmelerin taleplerinin yanı sıra gerçek ihtiyaçlarını detaylı bir şekilde analiz edip, analiz sonucuna göre lisanslama ve yazılım geliştirme hizmet sunmaktadır. İşletmelerin, maliyetlerini minimumda tutup, faydayı en üst seviyede tutmasını hedeflemektedir.</p>
                     </div>
                     <div className={styles.media}>
-                        <img src='/img/about.jpg' />
+                        <img src='/img/services/software.jpg' className={styles.pl_pr_60} />
                     </div>
                 </div>
 
