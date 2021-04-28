@@ -39,10 +39,13 @@ export default function UretimCozumleri() {
                 <div className={styles.split_content_view}>
                     <div className={styles.content}>
                         <h3>Depo Çözümleri</h3>
-                        <p>İÇERİK</p>
+                        <p>Üretimden satışa kadar, değer zincirinin bütünleşik yönetiminde depo yönetim sistemi kilit rol oynamaktadır. Bütünleşik ve otomatize depo yönetimi sayesinde işletmelerin maliyetleri düşerken verimlilikleri de artıyor. Terapi’nin Depo Yönetim Sistemi portföyündeki ürünü ile her ölçekten işletmelerin malzeme, personel yönetimi açısından da önemlidir. Bu sayede müşterilerine ürünü, gerçek zamanda, istenilen yerde ve talep edilen miktarda sunan işletmeler, verimli depo süreçleri oluşturarak kârlılık ve rekabet avantajı sağlar.</p>
+                        <p>Depo yönetimi, üretim süreçlerinin teknolojik gelişmelere göre şekil almasından sonra en önemli alanlardan birisi haline geldi.</p>
+                        <p>Terapi, depo çözümlerinde ETU ismiyle geliştirdiği ürün ile üretime destek vermektedir. ETU’ da satınalma irsaliyesi, satınalma iade irsaliyesi, satış siparişi, satış irsaliyesi, satış iade irsaliyesi, sayım, depolar arası sevkiyat, ürün barkod doğrulama, stok yeri takibi gibi işlemlerinizi hızlı ve kolay bir şekilde yönetebilirsiniz.</p>
+                        <p>Logo ERP çözümleriyle entegre çalışan Depo Yönetim Sistemi çözümleri, üretimden satışa kadar her noktada etkili kontrol ve yönetim sağlıyor. El terminallerinin sisteme entegrasyonu, en son teknolojili barkod sistemleri, farklı modüllerin kullanılabilmesi, ihtiyaca göre uyarlamalar yapılabilmesi gibi özellikler sunan Terapi, depo çözümleriyle işletmeler maliyetlerini düşürürken verimliliklerini artırabiliyor.</p>
                     </div>
                     <div className={styles.media}>
-                        <img src='/img/about.jpg' />
+                        <img src='/img/solutions/warehouse.jpg' className={styles.pl_pr_60} />
                     </div>
                 </div>
 

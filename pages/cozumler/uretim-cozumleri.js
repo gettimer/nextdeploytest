@@ -39,10 +39,12 @@ export default function UretimCozumleri() {
                 <div className={styles.split_content_view}>
                     <div className={styles.content}>
                         <h3>Üretim Çözümleri</h3>
-                        <p>İÇERİK</p>
+                        <p>Terapi, Logo ERP çözümlerini her ölçekten ve her sektörden işletmenin tüm verileri ve iş süreçlerini merkezi bir şekilde uçtan uca yönetmesini sağlıyor. Üretimden satın almaya, dış ticaretten satışa kadar tüm operasyonlarda görünürlük, etkin kontrol ve veri güvenilirliği sağlayan Logo ERP ile daha fazla verimlilik elde ediliyor. Üretimde Entegreli çözümleri ile faydalı ürün kullanımını artırıyoruz.  Operasyonel süreçleri otomatik hale getiren ERP iş yükünü de önemli ölçüde azaltarak zaman ve maliyet tasarrufu kazandırıyor.</p>
+                        <p>Terapi, Kobi ve kurumsal alanda birden fazla sektörde, sektöre özel çözümleri bulunan bir kuruluşdur. Üretim çözümlerimiz, KOBİ alanında TPM (Terapi Production Manager) ürünü ile üretime destek vermektedir. Bu ürün sayesinde Logonun Kobi ürünlerini kullanan işletmeler kurumsal segmentteki birçok özelliğe sahip olarak, kobi ürününü kullanmaya devam etmektedirler.  Reçete grupları, rota grupları, reçeteler, reçete süreleri, çalışanlar, hata tanımları, duruş tanımları vb. özelliklerin tamamı TPM ürünümüzde mevcuttur. </p>
+                        <p>Kurumsal segmentte işletmelerin isteklerine, sektörlerine göre çözümler üretiyoruz. Genel veri tabanı mimarisi olarak Logo kurumsal ürünlerini kullanırken, Entegrasyonlarımızı son teknolojiler ile destekliyoruz. Üretimde, MPS, MRP gibi süreçlerin yanı sıra yapay zekâ ile planlama algoritmaları geliştiriyoruz. Sahadaki verileri DIP (Data Input Panel) uygulamamız ile topluyor, muhasebe departmanının maliyet muhasebesi yapması için zemin oluşturuyoruz.</p>
                     </div>
                     <div className={styles.media}>
-                        <img src='/img/about.jpg' />
+                        <img src='/img/solutions/production.jpg' className={styles.pl_pr_60} />
                     </div>
                 </div>
 

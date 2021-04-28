@@ -39,10 +39,14 @@ export default function UretimCozumleri() {
                 <div className={styles.split_content_view}>
                     <div className={styles.content}>
                         <h3>E-Ticaret Entegrasyon</h3>
-                        <p>İÇERİK</p>
+                        <p><strong>Her işletmenin ihtiyacı olan Pazaryeri Entegrasyonu, tüm popüler sanal pazar yerlerine entegre olduğu gibi, özel e-ticaret siteleri ile de entegre olarak verimliliği artırıyor.</strong></p>
+                        <p>E-ticaret kullanıcıları; iş akış süreçlerini her geçen gün iyileştirip, geliştirerek devam ettirirken Pazaryeri Entegrasyonu ile tüm mağazalarınızı hızlı, hatasız ve tam anlamıyla parametrik bir şekilde entegre olmasını sağlayıp, satışlarınızı tek bir ekrandan yönetebilirsiniz.</p>
+                        <p>Farklı Ambarlarınızdaki stokları tek bir panelde yönetimini sağlayabilirsiniz. Entegrasyon paneliniz ile ERP programınız arasında farklı bağlantı noktaları belirleyerek farklı ürün kodlamaları kullanabilirsiniz. Ürün kartlarınızı Tekil, Paket veya Varyantlı açabilirsiniz. Kolay bir şekilde, varyantlarınızı pazaryeri bazında eşleme yapıp ürünlerinizi pazaryerlerinde yayınlayabilirsiniz.</p>
+                        <p>Trenyol, N11, Gittigidiyor, Hepsiburada, Çiçeksepeti, Amazon vb. platformları tekbir ekran üzerinden yönetebilirsiniz. Karlılık tanımları veya kampanya tanımları ile ürün fiyatlarında hızlı ve kolay bir şekilde güncelleme yapabilirsiniz. Kargo etiketleri tekil veya toplu bir şekilde basılabilir, pazaryeri bazında parametreleri güncelleme imkanına sahip olabilirsiniz.</p>
+                        <p>Kullanıcı dostu ekran tasarımları ile zaman kaybetmeden pazaryeri entegrasyon sürecinizi yönetebilir, rekabet robotu ile ürünlerinizi pazaryerlerinde satış potansiyelini artırabilirsiniz.</p>
                     </div>
                     <div className={styles.media}>
-                        <img src='/img/about.jpg' />
+                        <img src='/img/solutions/ecommerce.jpg' className={styles.pl_pr_60} />
                     </div>
                 </div>
 

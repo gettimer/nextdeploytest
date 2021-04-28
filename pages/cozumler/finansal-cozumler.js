@@ -39,10 +39,14 @@ export default function UretimCozumleri() {
                 <div className={styles.split_content_view}>
                     <div className={styles.content}>
                         <h3>Finansal Çözümler</h3>
-                        <p>İÇERİK</p>
+                        <p>Finans sektörü, küresel ve yerel gelişmelerden hızlı etkilenen yapısıyla, son derece çevik hareket edebilmeyi ve hem değişen koşullara hem de mevzuatlara uyum sağlamayı gerektiriyor. Dolayısıyla dinamik olması kritik önem taşıyor. Logo, mikro işletmelerden büyük ölçekli işletmelere kadar tüm şirketlere yönelik uçtan uca çözümleriyle, Finansın ihtiyaç duyduğu esneklik, çeviklik ve uyumluluğu kazandırıyor.</p>
+                        <p>Finans Yönetimi farklı finansal hareketleri oluşturmak, bir cari altında toplamak, depolamak ve raporlamak üzere kurgulanan yapının, sonuçta tek bir asli amacı vardır: <b>“Para”</b>.</p>
+                        <p>Muhasebesini bir muhasebe yazılımı altında tutmayan ya da muhasebe yazılımı kullanmayan kurumlar yok olmaya mahkumdur. Muhasebe sistemlerinin temel amacı giriş ve çıkış yapılan para akışını yönetmektir. Fakat iyi bir finansçı: Karı düzenler, nakit akışı yönetir, vergi ve mevzuata yönelik kurumun sürdürülebilirliğini güvence altına alabilir.</p>
+                        <p>İşletmeler, e-tabloların yanı sıra işlerini kolaylaştıracak stratejik muhasebesel taktiklere ihtiyaç duymaktadırlar. Terapi Yazılım olarak, sadece devlet kanadında işlerin yürütülmesi için değil tutarlı, anlaşılabilir, güvenilir, faydalı yapılar kurarak işletmelere finansal ışık tutmak için çalışıyoruz. Mevcutta yetersiz gelen standart yazılımların desteklenmesi için uyarlamalar veya hatırlatıcı uygulamalar geliştiriyoruz.  Borç / Alacak Raporları, Varlık Raporları / Personel Gider Analizi / Hizmet Raporları / Tahsilat Raporları / Risk Yönetim Raporları / Gelir Yönetimi vb. daha sağlıklı bir finans raporlaması yapılmaktadır.</p>
+                        <p>Program içerisinde var olan raporlamaların daha anlamlı ve anlaşılabilir olması büyük önem arz etmektedir. Manuel olarak hazırlanan veya raporlanma süreci uzun olan her rapor, tek tek ele alınarak özel raporlama çözümleri sunulmaktadır.</p>
                     </div>
                     <div className={styles.media}>
-                        <img src='/img/about.jpg' />
+                        <img src='/img/solutions/finance.jpg' className={styles.pl_pr_60} />
                     </div>
                 </div>
 

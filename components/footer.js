@@ -16,28 +16,41 @@ export default function Footer() {
                         <div>
                             <Link href=''><a>Hakkımızda</a></Link>
                             <Link href=''><a>Vizyon Misyon</a></Link>
-                            <Link href=''><a>Bizden Haberler</a></Link>
+                            <Link href=''><a>Zaman Tüneli</a></Link>
                             <Link href=''><a>Referanslar</a></Link>
-                            <Link href=''><a>Sektörler Başarı Hikayeleri</a></Link>
+                            <Link href=''><a>Başarı Hikayeleri</a></Link>
                         </div>
                         <div>
-                            <Link href=''><a>Danışmanlık</a></Link>
-                            <Link href=''><a>Destek</a></Link>
-                            <Link href=''><a>Eğitim</a></Link>
-                            <Link href=''><a>Özel Yazılımlar</a></Link>
+                            <Link href=''><a>Eğitim Hizmetleri</a></Link>
+                            <Link href=''><a>Destek Hizmetleri</a></Link>
+                            <Link href=''><a>Danışmanlık Hizmetleri</a></Link>                                                        
+                            <Link href=''><a>Yazılım Hizmetleri</a></Link>
+                            <Link href=''><a>Proje Yönetimi</a></Link>
                         </div>
                         <div>
-                            <Link href=''><a>Raporlama</a></Link>
-                            <Link href=''><a>Logo</a></Link>
-                            <Link href=''><a>Özel</a></Link>
-                            <Link href=''><a>MES</a></Link>
+                            <Link href=''><a>KOBİ</a></Link>
                             <Link href=''><a>ERP</a></Link>
+                            <Link href=''><a>HR</a></Link>
+                            <Link href=''><a>E-ÇÖZÜMLER</a></Link>
+                            <Link href=''><a>CRM</a></Link>
+                            {/*<Link href=''><a>İŞ ANALİTİĞİ</a></Link>
+                            <Link href=''><a>PERAKENDE</a></Link>
+                            <Link href=''><a>DEPO ÇÖZÜMLERİ</a></Link>
+                            <Link href=''><a>İŞ AKIŞ YÖNETİMİ</a></Link>
+                            <Link href=''><a>SAHA SATIŞ YÖNETİMİ</a></Link>
+                            <Link href=''><a>İŞ SAĞLIĞI VE GÜVENLİĞİ</a></Link> */}
+                        </div>
+                        <div>
+                            <Link href=''><a>Üretim Çözümleri</a></Link>
+                            <Link href=''><a>Depo Çözümleri</a></Link>
+                            <Link href=''><a>Saha Satış Çözümleri</a></Link>
+                            <Link href=''><a>Finansal Çözümler</a></Link>
+                            <Link href=''><a>E-Ticaret Entegrasyon</a></Link>
                         </div>
                         <div>
                             <Link href=''><a>İletişim</a></Link>
                             <Link href=''><a>Sizi Arayalım</a></Link>
-                            <Link href=''><a>Hata Bildirin</a></Link>
-                        </div>
+                        </div>                        
                     </div>
                     <div className={styles.copyright}>
                         © 2021 Terapi Yazılım A.Ş. Tüm hakları saklıdır.

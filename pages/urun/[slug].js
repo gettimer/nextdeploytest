@@ -111,7 +111,9 @@ export default function Product({ prod, category_id }) {
                                 <div className={styles.document_list}>
                                     <strong>Dökümanlar</strong>
                                     {prod[0].documents.map(e => (
-                                        <a href={e.url}>{e.name}</a>
+                                        e.url !== 'undefined' && e.url !== null && e.url !== '' ? 
+                                        <a target="_blank" href={e.url}>{e.name}</a>
+                                        :null
                                     ))}
                                 </div>
                                 : null}

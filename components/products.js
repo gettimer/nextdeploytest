@@ -20,8 +20,19 @@ export default function Products() {
                             <img src='/img/home/reports.jpg' />
                         </div>
                         <div className={styles.content}>
-                            <h3>Raporlama Çözümleri</h3>
+                            <h3>Hizmetler</h3>
                             <p>Hızlı ve kalıcı çözümlerle iş ortaklarımızın yanında olmaya devam etmekteyiz.</p>
+                            <ul>
+                                <li>
+                                    <Link href=''><a>EĞİTİM</a></Link>
+                                </li>
+                                <li>
+                                    <Link href=''><a>DESTEK</a></Link>
+                                </li>
+                                <li>
+                                    <Link href=''><a>DANIŞMANLIK</a></Link>
+                                </li>
+                            </ul>                            
                         </div>
                     </div>
                 </div>
@@ -31,7 +42,7 @@ export default function Products() {
                             <img src='/img/home/logo.jpg' />
                         </div>
                         <div className={styles.content}>
-                            <h3>Logo Ürünleri</h3>
+                            <h3>Ürünler</h3>
                             <p>Hızlı ve kalıcı çözümlerle iş ortaklarımızın yanında olmaya devam etmekteyiz.</p>
                             <ul>
                                 <li>
@@ -41,7 +52,7 @@ export default function Products() {
                                     <Link href=''><a>ERP</a></Link>
                                 </li>
                                 <li>
-                                    <Link href=''><a>IK</a></Link>
+                                    <Link href=''><a>HR</a></Link>
                                 </li>
                             </ul>
                         </div>
@@ -53,18 +64,18 @@ export default function Products() {
                             <img src='/img/home/logo_product.jpg' />
                         </div>
                         <div className={styles.content}>
-                            <h3>Logo Ürünleri</h3>
+                            <h3>Çözümler</h3>
                             <p>Hızlı ve kalıcı çözümlerle iş ortaklarımızın yanında olmaya devam etmekteyiz.</p>
                             <ul>
                                 <li>
-                                    <Link href=''><a>TSK SATIŞ KONSOLU</a></Link>
+                                    <Link href=''><a>ÜRETİM</a></Link>
                                 </li>
                                 <li>
-                                    <Link href=''><a>ETU DEPO YÖNETİMİ</a></Link>
+                                    <Link href=''><a>DEPO</a></Link>
                                 </li>
                                 <li>
-                                    <Link href=''><a>TGM GENRESMAN AKTARIMI</a></Link>
-                                </li>
+                                    <Link href=''><a>FİNANSAL</a></Link>
+                                </li>                                
                             </ul>
                         </div>
                     </div>
