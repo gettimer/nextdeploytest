@@ -14,7 +14,7 @@ export default function Home() {
     <Layout>
       <Head>
         <title>Terapi Yazılım</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />   
       </Head>
       <Slider />
       <Features />

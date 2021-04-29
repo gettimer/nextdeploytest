@@ -18,10 +18,9 @@ export default function Iletisim() {
     const [maps, setMaps] = useState([
         {
             map0: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12186.874540991887!2d29.05058280679321!3d40.21532132806919!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4180aa310a4bfb9e!2zVGVyYXBpIFlhesSxbMSxbSAtIExvZ28gw4fDtnrDvG0gT3J0YcSfxLE!5e0!3m2!1str!2s!4v1435062861858',
-            map1: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12186.874540991887!2d29.05058280679321!3d40.21532132806919!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4180aa310a4bfb9e!2zVGVyYXBpIFlhesSxbMSxbSAtIExvZ28gw4fDtnrDvG0gT3J0YcSfxLE!5e0!3m2!1str!2s!4v1435062861858'
+            map1: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d97482.66558840382!2d28.833334686103242!3d40.223891017490416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xeba5ffff10151b00!2zVEVSQVDEsCBZQVpJTElNIC0gQVJHRSBPRsSwU8Sw!5e0!3m2!1str!2str!4v1619674802688!5m2!1str!2str'
         }
     ])
-
     return (
         <Layout>
             <Head>
