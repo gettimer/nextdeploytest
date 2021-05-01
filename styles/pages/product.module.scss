@@ -115,14 +115,40 @@
         align-items: stretch;
         flex-wrap:wrap;
         justify-content:space-between;
-
         li {
-            width:49%;
+            width:100%;
+            min-height:rem(60);
+            max-height:rem(60);
             padding:rem(20);
             border:rem(1) solid rgba(#777B86,.4);
             border-radius:rem(8);
             margin-bottom:rem(20);
             font-size:rem(13);
+            transition:all .6s;
+            overflow:hidden;
+            position:relative;
+            cursor:pointer;
+            p {
+                opacity:0;
+                transition:all .6s;
+                margin-top:rem(10);
+            }
+            span {
+                position:absolute;
+                right:rem(20);
+                top:rem(16);
+                font-weight:800;
+                font-size:rem(18);
+            }
+            &.active {
+                border-color:#F79A42;
+                min-height:rem(60);
+                max-height:rem(400);
+                p {
+                    overflow:hidden;
+                    opacity:1;
+                }
+            }
         }
     }
 }
@@ -223,6 +249,11 @@
         @keyframes example2 {
             from {opacity:0;top:rem(-30);}
             to {opacity:1;top:0}
+        }
+
+        @keyframes example3 {
+            from {height:0}
+            to {height:100%}
         }
 
 @media (max-width: 991.98px) { 

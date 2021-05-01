@@ -13,6 +13,7 @@ export default function Product({ prod, category_id }) {
 
     const [openSubState, setOpenSubState] = useState(null);
     const [playVideo, setPlayVideo] = useState(false);
+    const [collapse, setCollapse] = useState(0)
 
     useEffect(() => {
         setOpenSubState(parseFloat(category_id));
@@ -44,7 +45,7 @@ export default function Product({ prod, category_id }) {
 
                         <div className={styles.vert_nav}>
                             <ul>
-                                {products.map((ele, index) =>                                
+                                {products.map((ele, index) =>
                                     <li key={ele.category_id}>
                                         <img src="/img/navicons/kobi.svg" />
                                         <a className={ele.category_id === parseFloat(category_id) ? `${styles.active}` : null} onClick={() => openSubState === ele.category_id ? setOpenSubState(null) : setOpenSubState(ele.category_id)}>{ele.category}</a>
@@ -93,7 +94,7 @@ export default function Product({ prod, category_id }) {
                             <h2>{prod[0].name}</h2>
                             <div>
                                 {prod[0].texts.map(e => (
-                                    <p>{e.p}</p>
+                                    <p dangerouslySetInnerHTML={{ __html: e.p }}></p>
                                 ))}
                             </div>
                             <div className={styles.splash}>
@@ -102,8 +103,12 @@ export default function Product({ prod, category_id }) {
                             </div>
                             <div>
                                 <ul>
-                                    {prod[0].props.map(e => (
-                                        <li><strong>{e.p}</strong></li>
+                                    {prod[0].props.map((e, index) => (
+                                        <li key={`collapse_${index}`} className={collapse === index ? `${styles.active}` : null} onClick={() => collapse === index ? setCollapse(null) : setCollapse(index)}>
+                                            <strong dangerouslySetInnerHTML={{ __html: e.p }}></strong>
+                                            <p dangerouslySetInnerHTML={{ __html: e.d }}></p>
+                                            <span>{collapse === index ? <>-</> : <>+</>}</span>
+                                        </li>
                                     ))}
                                 </ul>
                             </div>
@@ -111,9 +116,9 @@ export default function Product({ prod, category_id }) {
                                 <div className={styles.document_list}>
                                     <strong>Dökümanlar</strong>
                                     {prod[0].documents.map(e => (
-                                        e.url !== 'undefined' && e.url !== null && e.url !== '' ? 
-                                        <a target="_blank" href={e.url}>{e.name}</a>
-                                        :null
+                                        e.url !== 'undefined' && e.url !== null && e.url !== '' ?
+                                            <a target="_blank" href={e.url}>{e.name}</a>
+                                            : null
                                     ))}
                                 </div>
                                 : null}

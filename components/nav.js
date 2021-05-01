@@ -109,12 +109,12 @@ export default function Nav() {
                                 <div className={styles.sub_menu_grid}>
                                     <div className={styles.sub_menu_block}>
                                         <Link href='/kurumsal/hakkimizda'>
-                                            <a>Hakkımmızda</a>
+                                            <a>Hakkımızda</a>
                                         </Link>
                                         <Link href='/kurumsal/vizyon-misyon'>
                                             <a>Vizyon/Misyon</a>
                                         </Link>
-                                        <Link href='kurumsal/zaman-tuneli'>
+                                        <Link href='/kurumsal/zaman-tuneli'>
                                             <a>Zaman Tüneli</a>
                                         </Link>
                                     </div>
