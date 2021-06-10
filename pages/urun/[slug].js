@@ -132,9 +132,8 @@ export default function Product({ prod, category_id }) {
                     <svg viewBox="0 0 512 512"><path d="M256 16C123 16 16 123 16 256S123 496 256 496C389 496 496 389 496 256S389 16 256 16ZM307 341L256 290L205 341C196 350 180 350 171 341C162 332 162 316 171 307L222 256L171 205C162 196 162 180 171 171C180 162 196 162 205 171L256 222L307 171C316 162 332 162 341 171C350 180 350 196 341 205L290 256L341 307C350 316 350 332 341 341C332 350 316 350 307 341Z" /></svg>
                 </button>
                 <div className={styles.video_player}>
-                    <video width="700" controls autoPlay>
-                        <source src={prod[0].video} type="video/mp4" />
-                    </video>
+                    <iframe width="100%" height="500" src={prod[0].video} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style={{ height: '450px' }}></iframe>
+
                 </div>
             </div> : null}
         </Layout>
