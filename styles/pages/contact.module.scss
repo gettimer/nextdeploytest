@@ -163,6 +163,17 @@
     position: relative;
     margin-top: 24px;
     margin-bottom:rem(35);
+
+    small {
+        display:none;
+    }
+
+    &_error {
+        small {
+            display:inline-block;
+            color:red;
+        }
+    }
 }
 
 .field__label {
@@ -212,6 +223,18 @@
         border-bottom:solid rem(2) rgba(#777B86,.5);
         padding:rem(12) 0;
         font-size:rem(16);
+    }
+
+    small {
+        display:none;
+    }
+
+    &_error {
+        small {
+            display:inline;
+            color:red;
+        }
+       
     }
 }
 

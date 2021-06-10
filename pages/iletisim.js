@@ -15,6 +15,7 @@ const NoSSR_IFrame_MAP = dynamic(() => import("../components/map"), {
 
 export default function Iletisim() {
 
+
     const [maps, setMaps] = useState([
         {
             map0: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12186.874540991887!2d29.05058280679321!3d40.21532132806919!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4180aa310a4bfb9e!2zVGVyYXBpIFlhesSxbMSxbSAtIExvZ28gw4fDtnrDvG0gT3J0YcSfxLE!5e0!3m2!1str!2s!4v1435062861858',

@@ -5,8 +5,8 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Layout from '../../components/layout'
 import styles from '../../styles/pages/contact.module.scss'
-
 import Select from 'react-select'
+import { toast } from 'react-toastify';
 
 const options = [
     {
@@ -408,9 +408,106 @@ const customStyles = {
     })
 };
 
-
-
 export default function Iletisim() {
+    const [queryData, setQueryData] = useState({
+        company_name: '',
+        city_name: '',
+        name_surname: '',
+        phone_number: '',
+        email: '',
+        message: ''
+    });
+
+    const [validationData, setValidationData] = useState({
+        company_name: true,
+        city_name: true,
+        name_surname: true,
+        phone_number: true,
+        email: true
+    });
+    const [process, setProcess] = useState(false);
+    const [refresh, setRefresh] = useState(0);
+
+
+    const handleChange = e => {
+        const { name, value } = e.target;
+        setQueryData(data => ({
+            ...data,
+            [name]: value
+        }));
+
+        setValidationData(data => ({
+            ...data,
+            [name]: true
+        }));
+    };
+
+    const handleChangeCity = e => {
+        const { value } = e;
+        setQueryData(data => ({
+            ...data,
+            ['city_name']: value
+        }));
+        setValidationData(data => ({
+            ...data,
+            ['city_name']: true
+        }));
+    }
+
+    function validateTextField(str) {
+        if (str.length > 2) {
+            return true
+        }
+        else {
+            return false
+        }
+    }
+    function validateEmail(str) {
+        return /^[a-z0-9][a-z0-9-_\.]+@([a-z]|[a-z0-9]?[a-z0-9-]+[a-z0-9])\.[a-z0-9]{2,10}(?:\.[a-z]{2,10})?$/.test(str)
+    }
+
+    function validatePhone(str) {
+        return /^\s*(?:\+?(\d{1,3}))?[- (]*(\d{3})[- )]*(\d{3})[- ]*(\d{4})(?: *[x/#]{1}(\d+))?\s*$/.test(str)
+    }
+
+    function validate() {
+
+        let temp = validationData;
+
+        Object.entries(queryData).map(([key, value], i) => {
+            if (key === 'email') {
+                temp[key] = validateEmail(value)
+            }
+            else if (key === 'phone_number') {
+                temp[key] = validatePhone(value)
+            }
+            else if (key === 'name_surname' || key === 'company_name' || key === 'city_name') {
+                temp[key] = validateTextField(value)
+            }
+        });
+
+        setValidationData(temp);
+        setRefresh(refresh + 1);
+
+        if (!Object.values(temp).includes(false)) {
+            send();
+        }
+
+    }
+
+    function send() {
+        setProcess(true);
+        fetch('/api/contact?data=' + JSON.stringify(queryData)).then(res => res.json()).then(data => {
+            setProcess(false);
+            if (data.status === 'success') {
+                toast.success('Mesajınız başarıyla gönderildi');
+                setTimeout(() => {
+                    location.reload();
+                }, 1000)
+
+            }
+        });
+    }
 
     return (
         <Layout>
@@ -437,8 +534,6 @@ export default function Iletisim() {
                 </div>
             </div>
             <div className={styles.contact}>
-
-
                 <div className='container'>
                     <div className={styles.form_layout}>
                         <div className={styles.form_content}>
@@ -450,32 +545,33 @@ export default function Iletisim() {
                             </p>
 
                             <div className={styles.form_body}>
-                                <div className={styles.field}>
-                                    <input className={styles.field__input} type="text" placeholder="Firma" />
-                                    <p className={styles.field__label}>Firma</p>
+                                <div className={!validationData.company_name ? `${styles.field} ${styles.field_error}` : `${styles.field}`}>
+                                    <input className={styles.field__input} type="text" placeholder="Firma" name='company_name' onChange={handleChange} />
+                                    <p className={styles.field__label}>Firma <small>(Firma adı boş bırakılamaz)</small></p>
                                     <small>Lüften çalıştığınız ya da sahibi olduğunuz firma ismini yazınız</small>
                                 </div>
-                                <div className={styles.field_select}>
-                                    <Select options={options} styles={customStyles} placeholder={'İL SEÇİNİZ'} />
+                                <div className={!validationData.city_name ? `${styles.field_select} ${styles.field_select_error}` : `${styles.field_select}`}>
+                                    <small>Lütfen Şehir Seçiniz</small>
+                                    <Select options={options} styles={customStyles} placeholder={'İL SEÇİNİZ'} onChange={handleChangeCity} />
+                                </div>
+                                <div className={!validationData.name_surname ? `${styles.field} ${styles.field_error}` : `${styles.field}`}>
+                                    <input className={styles.field__input} type="text" placeholder="Adınız Soyadınız" name='name_surname' onChange={handleChange} />
+                                    <p className={styles.field__label}>Adınız Soyadınız <small>(Lütfen isim giriniz)</small></p>
+                                </div>
+                                <div className={!validationData.phone_number ? `${styles.field} ${styles.field_error}` : `${styles.field}`}>
+                                    <input className={styles.field__input} type="text" placeholder="Telefon Numaranız" name='phone_number' onChange={handleChange} />
+                                    <p className={styles.field__label}>Telefon Numaranız <small>(Lütfen Telefon Numarası Giriniz)</small></p>
+                                </div>
+                                <div className={!validationData.email ? `${styles.field} ${styles.field_error}` : `${styles.field}`}>
+                                    <input className={styles.field__input} type="text" placeholder="E-Posta Adresiniz" name='email' onChange={handleChange} />
+                                    <p className={styles.field__label}>E-Posta Adresiniz <small>(Lütfen geçerli bir e-posta adresi giriniz)</small></p>
                                 </div>
                                 <div className={styles.field}>
-                                    <input className={styles.field__input} type="text" placeholder="Adınız Soyadınız" />
-                                    <p className={styles.field__label}>Adınız Soyadınız</p>
-                                </div>
-                                <div className={styles.field}>
-                                    <input className={styles.field__input} type="text" placeholder="Telefon Numaranız" />
-                                    <p className={styles.field__label}>Telefon Numaranız</p>
-                                </div>
-                                <div className={styles.field}>
-                                    <input className={styles.field__input} type="text" placeholder="E-Posta Adresiniz" />
-                                    <p className={styles.field__label}>E-Posta Adresiniz</p>
-                                </div>
-                                <div className={styles.field}>
-                                    <input className={styles.field__input} type="text" placeholder="Varsa Mesajınız" />
+                                    <input className={styles.field__input} type="text" placeholder="Varsa Mesajınız" name='message' onChange={handleChange} />
                                     <p className={styles.field__label}>Varsa Mesajınız</p>
                                 </div>
 
-                                <button className={styles.send}>Formu Gönder</button>
+                                <button className={styles.send} onClick={() => validate()}>Formu Gönder</button>
                             </div>
 
                         </div>
@@ -503,7 +599,7 @@ export default function Iletisim() {
                                         <svg xmlns="http://www.w3.org/2000/svg" width="28.55" height="25.685" viewBox="0 0 28.55 25.685"><defs></defs><g transform="translate(-1027.674 -525.763)"><path class="a" d="M1041.9,531.646l-13.659,6.434,4.724,2.17v6.991l9.165,4.207,8.995-4.019v-6.991l4.669-2.091Zm-.01,2.216,9.16,4.417-8.906,3.99-9.162-4.212Zm7.235,12.27-6.985,3.119-7.175-3.293v-4.789l7.169,3.295,6.991-3.131Z" /><path class="a" d="M1041.835,527.978l13.521,6.513.867-1.8-14.379-6.926-14.171,6.672.852,1.81Z" /></g></svg>
                                         Ürün Satınalma Talebi
                                     </a>
-                                </Link>                                
+                                </Link>
                                 <Link href="">
                                     <a>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="26.696" height="26.72" viewBox="0 0 26.696 26.72"><defs></defs><g transform="translate(-864.67 -524.953)"><rect class="a" width="5.386" height="5.386" transform="translate(864.67 532.887)" /><rect class="a" width="5.386" height="5.386" transform="translate(864.67 539.587)" /><rect class="a" width="5.386" height="5.386" transform="translate(864.67 546.287)" /><rect class="a" width="5.386" height="5.386" transform="translate(871.346 546.287)" /><rect class="a" width="5.386" height="5.386" transform="translate(871.346 539.587)" /><rect class="a" width="5.386" height="5.386" transform="translate(885.979 524.953)" /><rect class="a" width="5.386" height="5.386" transform="matrix(0.797, -0.604, 0.604, 0.797, 880.134, 538.251)" /><rect class="a" width="5.386" height="5.386" transform="matrix(0.807, 0.59, -0.59, 0.807, 878.556, 526.229)" /><rect class="a" width="5.386" height="5.386" transform="translate(878.021 546.287)" /></g></svg>
@@ -527,7 +623,7 @@ export default function Iletisim() {
                                         <svg xmlns="http://www.w3.org/2000/svg" width="25.989" height="26.107" viewBox="0 0 25.989 26.107"><defs></defs><g transform="translate(-865.045 -684.212)"><path class="a" d="M885.153,698.776l-.844,1.379a12.115,12.115,0,0,0-1.781,6.324v1.84h-7.455v-3.925h-4.638a.727.727,0,0,1-.726-.726v-5.305l-2.243-.916,1.307-2.139a4.506,4.506,0,0,0,.685-1.995,7.784,7.784,0,0,1,6.043-6.921l-.43-1.954a9.8,9.8,0,0,0-7.606,8.712,2.534,2.534,0,0,1-.4,1.116l-1.862,3.048a1.1,1.1,0,0,0-.1.915l.2.495,2.406.983v3.961a2.729,2.729,0,0,0,2.726,2.726h2.638v3.925h11.455v-3.84a10.1,10.1,0,0,1,1.487-5.279l.844-1.379a6.661,6.661,0,0,0,.872-2.27l-1.965-.367A4.675,4.675,0,0,1,885.153,698.776Z" /><path class="a" d="M888.936,684.212h-8.411a2.1,2.1,0,0,0-2.1,2.1v7h-.009v4.995l4.076-4.076h6.442a2.1,2.1,0,0,0,2.1-2.1v-5.824A2.1,2.1,0,0,0,888.936,684.212Zm.1,7.923a.1.1,0,0,1-.1.1h-8.509v-5.922a.1.1,0,0,1,.1-.1h8.411a.1.1,0,0,1,.1.1Z" /></g></svg>
                                         Pazaryeri Entegrasyon İşlemi
                                     </a>
-                                </Link>                                                                
+                                </Link>
                             </div>
                         </div>
                     </div>
