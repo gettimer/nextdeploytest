@@ -7,7 +7,7 @@ function Layout({ children }) {
     return <div>
         <Head>
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-            <Alpemix />
+            {/* <Alpemix /> */}
         </Head>
         <Nav />
         <main>

@@ -72,22 +72,24 @@ const customStyles = {
     })
 };
 
-export default function Iletisim() {
+export default function YilSonuDevirIslemi() {
     const [queryData, setQueryData] = useState({
-        company_name: '',
-        city_name: '',
         name_surname: '',
-        phone_number: '',
         email: '',
+        company_name: '',
+        phone_number: '',
+        city_name: '',
+        product_name: '',
         message: ''
     });
 
     const [validationData, setValidationData] = useState({
-        company_name: true,
-        city_name: true,
         name_surname: true,
+        email: true,
+        company_name: true,
         phone_number: true,
-        email: true
+        city_name: true,
+        product_name: true,
     });
     const [process, setProcess] = useState(false);
     const [refresh, setRefresh] = useState(0);
@@ -145,7 +147,7 @@ export default function Iletisim() {
             else if (key === 'phone_number') {
                 temp[key] = validatePhone(value)
             }
-            else if (key === 'name_surname' || key === 'company_name' || key === 'city_name') {
+            else if (key === 'name_surname' || key === 'company_name' || key === 'city_name' || key === 'product_name') {
                 temp[key] = validateTextField(value)
             }
         });
@@ -161,7 +163,7 @@ export default function Iletisim() {
 
     function send() {
         setProcess(true);
-        fetch('/api/contact?method=contact&data=' + JSON.stringify(queryData)).then(res => res.json()).then(data => {
+        fetch('/api/contact?method=YearEndTransfer&data=' + JSON.stringify(queryData)).then(res => res.json()).then(data => {
             setProcess(false);
             if (data.Status === 'Success') {
                 toast.success('Mesajınız başarıyla gönderildi');
@@ -175,15 +177,15 @@ export default function Iletisim() {
     return (
         <Layout>
             <Head>
-                <title>Terapi Yazılım - İletişim</title>
+                <title>Terapi Yazılım - Yıl Sonu Devir İşlemi</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div className={styles.subpage_header}>
                 <div className={styles.header_content}>
-                    <h1>Sizi Arıyalım</h1>
+                    <h1>Yıl Sonu Devir İşlemi</h1>
                     <div className={styles.breadcrumb}>
                         <Link href='/'><a>anasayfa</a></Link>
-                        <Link href=''><a>sizi arayalım</a></Link>
+                        <Link href=''><a>yıl sonu devir işlemi</a></Link>
                     </div>
                 </div>
                 <img src='/img/contact.jpg' />
@@ -192,7 +194,7 @@ export default function Iletisim() {
                 <div className='container'>
                     <div className={styles.subpage_nav_container}>
                         <Link href='/iletisim'><a>İletişim</a></Link>
-                        <Link href='/sizi-arayalim'><a className={styles.active}>Sizi Arayalım</a></Link>
+                        <Link href='/forms/yil-sonu-devir-islemi'><a className={styles.active}>Yıl Sonu Devir İşlemi</a></Link>
                     </div>
                 </div>
             </div>
@@ -201,7 +203,7 @@ export default function Iletisim() {
                     <div className={styles.form_layout}>
                         <div className={styles.form_content}>
                             <div className={`${styles.contact_title} ${styles.contact_title_p0}`}>
-                                <h3>Sizi Arayalım</h3>
+                                <h3>Yıl Sonu Devir İşlemi</h3>
                             </div>
                             <p className={styles.form_desc}>
                                 Devir işlemleri en fazla 2 kez yapılabilecektir. (Kart veya rakam devri farketmeksizin) 3. veya daha sonraki devir talepleriniz ayrıca ücretlendirilecektir.
@@ -215,7 +217,7 @@ export default function Iletisim() {
                                 <div className={!validationData.email ? `${styles.field} ${styles.field_error}` : `${styles.field}`}>
                                     <input className={styles.field__input} type="text" placeholder="E-Posta Adresiniz" name='email' onChange={handleChange} />
                                     <p className={styles.field__label}>E-Posta Adresiniz <small>(Lütfen geçerli bir e-posta adresi giriniz)</small></p>
-                                </div>
+                                </div>                                                               
                                 <div className={!validationData.company_name ? `${styles.field} ${styles.field_error}` : `${styles.field}`}>
                                     <input className={styles.field__input} type="text" placeholder="Firma" name='company_name' onChange={handleChange} />
                                     <p className={styles.field__label}>Firma <small>(Firma adı boş bırakılamaz)</small></p>
@@ -223,14 +225,18 @@ export default function Iletisim() {
                                 <div className={!validationData.phone_number ? `${styles.field} ${styles.field_error}` : `${styles.field}`}>
                                     <input className={styles.field__input} type="text" placeholder="Telefon Numaranız" name='phone_number' onChange={handleChange} />
                                     <p className={styles.field__label}>Telefon Numaranız <small>(Lütfen Telefon Numarası Giriniz)</small></p>
-                                </div>
+                                </div>                                
                                 <div className={!validationData.city_name ? `${styles.field_select} ${styles.field_select_error}` : `${styles.field_select}`}>
                                     <small>Lütfen Şehir Seçiniz</small>
                                     <Select options={cities} styles={customStyles} placeholder={'ŞEHİR SEÇİNİZ'} onChange={handleChangeCity} />
                                 </div>
+                                <div className={!validationData.name_surname ? `${styles.field} ${styles.field_error}` : `${styles.field}`}>
+                                    <input className={styles.field__input} type="text" placeholder="Ürün Adı" name='product_name' onChange={handleChange} />
+                                    <p className={styles.field__label}>Ürün Adı <small>(Lütfen ürün adını giriniz)</small></p>
+                                </div>                                
                                 <div className={styles.field}>
-                                    <input className={styles.field__input} type="text" placeholder="Varsa Mesajınız" name='message' onChange={handleChange} />
-                                    <p className={styles.field__label}>Varsa Mesajınız</p>
+                                    <input className={styles.field__input} type="text" placeholder="Mesajınız" name='message' onChange={handleChange} />
+                                    <p className={styles.field__label}>Mesajınız</p>
                                 </div>
 
                                 <button className={styles.send} onClick={() => validate()}>Formu Gönder</button>

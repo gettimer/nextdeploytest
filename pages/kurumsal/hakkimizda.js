@@ -45,14 +45,6 @@ export default function Hakkimizda() {
                         <p>Sadece bir destek firması değil, ihtiyaçlarınızın analizi için gerekli zamanı ayırarak proje bazlı çözümler sunar.</p>
                         <p>Bilgi-İşlem sektörünü takip ederek yenilikleri firmaların bilgisi doğrultusunda uygular ve irmaların bilişim sektöründe güncel kalmasını sağlar.</p>
 
-                        <p><strong>Vermekte Olduğumuz Hizmetler</strong></p>
-                        <p>Mali dönem devir işlemleri</p>
-                        <p>Proje Danışmanlığı</p>
-                        <p>Logo Destek (Teledestek, Yerinde Destek, Uzak Erişim)</p>
-                        <p>Kurumsal ve Bireysel Eğitimler</p>
-                        <p>Özel Çözümler (İşlem Kolaylığı, İş Pratikliği)</p>
-                        <p>Raporlama Çözümleri</p>
-                        <p>Veri Bakımı ve Güvenliği</p>
                     </div>
                     <div className={styles.media}>
                         <img src='/img/about.jpg' />

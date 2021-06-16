@@ -247,6 +247,7 @@
     height:rem(50);
     border-radius:rem(40);
     margin-top:rem(30);
+    cursor: pointer;
 }
 
 .form_select_grid {
@@ -276,6 +277,10 @@
                 fill: #F79A42;
             }
         }
+
+        img {
+            margin-bottom: rem(15);
+        }        
     }
 }
 
@@ -283,10 +288,6 @@
 
 .subpage_horizontal_nav {
    padding:0 rem(20);
-}
-
-.contact_title {
-    
 }
 
 .split_content {
