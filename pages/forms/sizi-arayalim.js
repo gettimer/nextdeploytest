@@ -192,7 +192,7 @@ export default function Iletisim() {
                 <div className='container'>
                     <div className={styles.subpage_nav_container}>
                         <Link href='/iletisim'><a>İletişim</a></Link>
-                        <Link href='/sizi-arayalim'><a className={styles.active}>Sizi Arayalım</a></Link>
+                        <Link href=''><a className={styles.active}>Sizi Arayalım</a></Link>
                     </div>
                 </div>
             </div>
@@ -226,7 +226,7 @@ export default function Iletisim() {
                                 </div>
                                 <div className={!validationData.city_name ? `${styles.field_select} ${styles.field_select_error}` : `${styles.field_select}`}>
                                     <small>Lütfen Şehir Seçiniz</small>
-                                    <Select options={cities} styles={customStyles} placeholder={'ŞEHİR SEÇİNİZ'} onChange={handleChangeCity} />
+                                    <Select options={cities} styles={customStyles} placeholder={'ŞEHİR'} onChange={handleChangeCity} />
                                 </div>
                                 <div className={styles.field}>
                                     <input className={styles.field__input} type="text" placeholder="Varsa Mesajınız" name='message' onChange={handleChange} />

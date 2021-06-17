@@ -51,7 +51,7 @@ export default function Slider() {
                         <div className={styles.generic}>
                             Büyük Düşünenler İçin <span>Güçlü Çözüm Ortağı</span>
                         </div>
-                        <Link href=''>
+                        <Link href='/urun/logo-j-platform-4-1'>
                             <a className={styles.ghost_button}>Ürünleri İncele</a>
                         </Link>
                     </div>
@@ -64,40 +64,14 @@ export default function Slider() {
                 <div className={styles.content_block}>
                     <div className='container'>
                         <div className={styles.generic}>
-                            Büyük Düşünenler İçin <span>Güçlü Çözüm Ortağı</span>
+                            Değişimi Başlatır <span>Geleceğe Taşır</span>
                         </div>
-                        <Link href=''>
+                        <Link href='/urun/logo-j-platform-4-1'>
                             <a className={styles.ghost_button}>Ürünleri İncele</a>
                         </Link>
                     </div>
                 </div>
                 <img className={styles.slider_img} src='/img/slider/1.jpg' />
-            </div>
-            <div className={`keen-slider__slide ${styles.number_slide}`}>
-                <div className={styles.content_block}>
-                    <div className='container'>
-                        <div className={styles.generic}>
-                            Büyük Düşünenledddddddddr İçin <span>Güçlü Çözüm Ortağı</span>
-                        </div>
-                        <Link href=''>
-                            <a className={styles.ghost_button}>Üründdddddddleri İncele</a>
-                        </Link>
-                    </div>
-                </div>
-                <img className={styles.slider_img} src='/img/slider/2.jpg' />
-            </div>
-            <div className={`keen-slider__slide ${styles.number_slide}`}>
-                <div className={styles.content_block}>
-                    <div className='container'>
-                        <div className={styles.generic}>
-                            Büyük Düşünenler İçin <span>Güçlü Çözüm Ortağı</span>
-                        </div>
-                        <Link href=''>
-                            <a className={styles.ghost_button}>Ürünleri İncele</a>
-                        </Link>
-                    </div>
-                </div>
-                <img className={styles.slider_img} src='/img/slider/3.jpg' />
             </div>            
         </div>
         {

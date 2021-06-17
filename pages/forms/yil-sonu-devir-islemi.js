@@ -194,7 +194,7 @@ export default function YilSonuDevirIslemi() {
                 <div className='container'>
                     <div className={styles.subpage_nav_container}>
                         <Link href='/iletisim'><a>İletişim</a></Link>
-                        <Link href='/forms/yil-sonu-devir-islemi'><a className={styles.active}>Yıl Sonu Devir İşlemi</a></Link>
+                        <Link href=''><a className={styles.active}>Yıl Sonu Devir İşlemi</a></Link>
                     </div>
                 </div>
             </div>
@@ -228,7 +228,7 @@ export default function YilSonuDevirIslemi() {
                                 </div>                                
                                 <div className={!validationData.city_name ? `${styles.field_select} ${styles.field_select_error}` : `${styles.field_select}`}>
                                     <small>Lütfen Şehir Seçiniz</small>
-                                    <Select options={cities} styles={customStyles} placeholder={'ŞEHİR SEÇİNİZ'} onChange={handleChangeCity} />
+                                    <Select options={cities} styles={customStyles} placeholder={'ŞEHİR'} onChange={handleChangeCity} />
                                 </div>
                                 <div className={!validationData.name_surname ? `${styles.field} ${styles.field_error}` : `${styles.field}`}>
                                     <input className={styles.field__input} type="text" placeholder="Ürün Adı" name='product_name' onChange={handleChange} />

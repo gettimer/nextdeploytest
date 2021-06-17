@@ -24,13 +24,13 @@ export default function Products() {
                             <p>Hızlı ve kalıcı çözümlerle iş ortaklarımızın yanında olmaya devam etmekteyiz.</p>
                             <ul>
                                 <li>
-                                    <Link href=''><a>EĞİTİM</a></Link>
+                                    <Link href='/hizmetler/egitim'><a>EĞİTİM</a></Link>
                                 </li>
                                 <li>
-                                    <Link href=''><a>DESTEK</a></Link>
+                                    <Link href='/hizmetler/destek'><a>DESTEK</a></Link>
                                 </li>
                                 <li>
-                                    <Link href=''><a>DANIŞMANLIK</a></Link>
+                                    <Link href='/hizmetler/danismanlik'><a>DANIŞMANLIK</a></Link>
                                 </li>
                             </ul>                            
                         </div>
@@ -46,13 +46,13 @@ export default function Products() {
                             <p>Hızlı ve kalıcı çözümlerle iş ortaklarımızın yanında olmaya devam etmekteyiz.</p>
                             <ul>
                                 <li>
-                                    <Link href=''><a>KOBI</a></Link>
+                                    <Link href='/urun/logo-isbasi-1-2'><a>KOBI</a></Link>
                                 </li>
                                 <li>
-                                    <Link href=''><a>ERP</a></Link>
+                                    <Link href='/urun/logo-j-platform-4-1'><a>ERP</a></Link>
                                 </li>
                                 <li>
-                                    <Link href=''><a>HR</a></Link>
+                                    <Link href='/urun/logo-j-hr-7-1'><a>HR</a></Link>
                                 </li>
                             </ul>
                         </div>
@@ -68,13 +68,13 @@ export default function Products() {
                             <p>Hızlı ve kalıcı çözümlerle iş ortaklarımızın yanında olmaya devam etmekteyiz.</p>
                             <ul>
                                 <li>
-                                    <Link href=''><a>ÜRETİM</a></Link>
+                                    <Link href='/cozumler/uretim-cozumleri'><a>ÜRETİM</a></Link>
                                 </li>
                                 <li>
-                                    <Link href=''><a>DEPO</a></Link>
+                                    <Link href='/cozumler/depo-cozumleri'><a>DEPO</a></Link>
                                 </li>
                                 <li>
-                                    <Link href=''><a>FİNANSAL</a></Link>
+                                    <Link href='/cozumler/finansal-cozumler'><a>FİNANSAL</a></Link>
                                 </li>                                
                             </ul>
                         </div>

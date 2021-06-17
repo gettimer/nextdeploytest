@@ -72,7 +72,7 @@ const customStyles = {
     })
 };
 
-export default function UrunTanitimDemosu() {
+export default function HizmetBakimAnlasmasiFormu() {
     const [queryData, setQueryData] = useState({
         name_surname: '',
         email: '',
@@ -163,7 +163,7 @@ export default function UrunTanitimDemosu() {
 
     function send() {
         setProcess(true);
-        fetch('/api/contact?method=ProductDemo&data=' + JSON.stringify(queryData)).then(res => res.json()).then(data => {
+        fetch('/api/contact?method=ServiceMaintenance&data=' + JSON.stringify(queryData)).then(res => res.json()).then(data => {
             setProcess(false);
             if (data.Status === 'Success') {
                 toast.success('Mesajınız başarıyla gönderildi');
@@ -177,15 +177,15 @@ export default function UrunTanitimDemosu() {
     return (
         <Layout>
             <Head>
-                <title>Terapi Yazılım - Ürün Tanıtım Demosu</title>
+                <title>Terapi Yazılım - Hizmet Bakım Anlaşması</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div className={styles.subpage_header}>
                 <div className={styles.header_content}>
-                    <h1>Ürün Tanıtım Demosu</h1>
+                    <h1>Hizmet Bakım Anlaşması</h1>
                     <div className={styles.breadcrumb}>
                         <Link href='/'><a>anasayfa</a></Link>
-                        <Link href=''><a>ürün tanıtım demosu</a></Link>
+                        <Link href=''><a>hizmet bakım anlaşması</a></Link>
                     </div>
                 </div>
                 <img src='/img/contact.jpg' />
@@ -194,7 +194,7 @@ export default function UrunTanitimDemosu() {
                 <div className='container'>
                     <div className={styles.subpage_nav_container}>
                         <Link href='/iletisim'><a>İletişim</a></Link>
-                        <Link href=''><a className={styles.active}>Ürün Tanıtım Demosu</a></Link>
+                        <Link href=''><a className={styles.active}>Hizmet Bakım Anlaşması</a></Link>
                     </div>
                 </div>
             </div>
@@ -203,7 +203,7 @@ export default function UrunTanitimDemosu() {
                     <div className={styles.form_layout}>
                         <div className={styles.form_content}>
                             <div className={`${styles.contact_title} ${styles.contact_title_p0}`}>
-                                <h3>Ürün Tanıtım Demosu</h3>
+                                <h3>Hizmet Bakım Anlaşması</h3>
                             </div>
                             <p className={styles.form_desc}>
                                 Devir işlemleri en fazla 2 kez yapılabilecektir. (Kart veya rakam devri farketmeksizin) 3. veya daha sonraki devir talepleriniz ayrıca ücretlendirilecektir.

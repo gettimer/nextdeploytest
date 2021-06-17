@@ -8,7 +8,7 @@ import styles from '../../styles/pages/contact.module.scss'
 import Select from 'react-select'
 import { toast } from 'react-toastify';
 import ContactForms from '../../components/contact_forms';
-import { cities } from '../../lib/contents';
+import { cities, commercial_system } from '../../lib/contents';
 
 const customStyles = {
     control: (provided, state) => ({
@@ -72,24 +72,25 @@ const customStyles = {
     })
 };
 
-export default function UrunTanitimDemosu() {
+export default function PazaryeriEntegrasyonu() {
     const [queryData, setQueryData] = useState({
-        name_surname: '',
-        email: '',
         company_name: '',
-        phone_number: '',
         city_name: '',
-        product_name: '',
+        name_surname: '',
+        phone_number: '',
+        email: '',
+        commercial_system: '',
+        commercial_system_name: '',
         message: ''
     });
 
     const [validationData, setValidationData] = useState({
-        name_surname: true,
-        email: true,
         company_name: true,
-        phone_number: true,
         city_name: true,
-        product_name: true,
+        name_surname: true,
+        phone_number: true,
+        commercial_system:true,
+        email: true
     });
     const [process, setProcess] = useState(false);
     const [refresh, setRefresh] = useState(0);
@@ -120,6 +121,18 @@ export default function UrunTanitimDemosu() {
         }));
     }
 
+    const handleChangeCommercialSystem = e => {
+        const { value } = e;
+        setQueryData(data => ({
+            ...data,
+            ['commercial_system']: value
+        }));
+        setValidationData(data => ({
+            ...data,
+            ['commercial_system']: true
+        }));
+    }
+
     function validateTextField(str) {
         if (str.length > 2) {
             return true
@@ -147,7 +160,7 @@ export default function UrunTanitimDemosu() {
             else if (key === 'phone_number') {
                 temp[key] = validatePhone(value)
             }
-            else if (key === 'name_surname' || key === 'company_name' || key === 'city_name' || key === 'product_name') {
+            else if (key === 'name_surname' || key === 'company_name' || key === 'city_name' || key === 'commercial_system') {
                 temp[key] = validateTextField(value)
             }
         });
@@ -163,7 +176,7 @@ export default function UrunTanitimDemosu() {
 
     function send() {
         setProcess(true);
-        fetch('/api/contact?method=ProductDemo&data=' + JSON.stringify(queryData)).then(res => res.json()).then(data => {
+        fetch('/api/contact?method=MarketplaceIntegration&data=' + JSON.stringify(queryData)).then(res => res.json()).then(data => {
             setProcess(false);
             if (data.Status === 'Success') {
                 toast.success('Mesajınız başarıyla gönderildi');
@@ -177,15 +190,15 @@ export default function UrunTanitimDemosu() {
     return (
         <Layout>
             <Head>
-                <title>Terapi Yazılım - Ürün Tanıtım Demosu</title>
+                <title>Terapi Yazılım - Pazaryeri Entegrasyon İşlemi</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div className={styles.subpage_header}>
                 <div className={styles.header_content}>
-                    <h1>Ürün Tanıtım Demosu</h1>
+                    <h1>Sizi Arıyalım</h1>
                     <div className={styles.breadcrumb}>
                         <Link href='/'><a>anasayfa</a></Link>
-                        <Link href=''><a>ürün tanıtım demosu</a></Link>
+                        <Link href=''><a>pazaryeri entegrasyon işlemi</a></Link>
                     </div>
                 </div>
                 <img src='/img/contact.jpg' />
@@ -194,7 +207,7 @@ export default function UrunTanitimDemosu() {
                 <div className='container'>
                     <div className={styles.subpage_nav_container}>
                         <Link href='/iletisim'><a>İletişim</a></Link>
-                        <Link href=''><a className={styles.active}>Ürün Tanıtım Demosu</a></Link>
+                        <Link href=''><a className={styles.active}>Pazaryeri Entegrasyon İşlemi</a></Link>
                     </div>
                 </div>
             </div>
@@ -203,7 +216,7 @@ export default function UrunTanitimDemosu() {
                     <div className={styles.form_layout}>
                         <div className={styles.form_content}>
                             <div className={`${styles.contact_title} ${styles.contact_title_p0}`}>
-                                <h3>Ürün Tanıtım Demosu</h3>
+                                <h3>Pazaryeri Entegrasyon İşlemi</h3>
                             </div>
                             <p className={styles.form_desc}>
                                 Devir işlemleri en fazla 2 kez yapılabilecektir. (Kart veya rakam devri farketmeksizin) 3. veya daha sonraki devir talepleriniz ayrıca ücretlendirilecektir.
@@ -217,25 +230,29 @@ export default function UrunTanitimDemosu() {
                                 <div className={!validationData.email ? `${styles.field} ${styles.field_error}` : `${styles.field}`}>
                                     <input className={styles.field__input} type="text" placeholder="E-Posta Adresiniz" name='email' onChange={handleChange} />
                                     <p className={styles.field__label}>E-Posta Adresiniz <small>(Lütfen geçerli bir e-posta adresi giriniz)</small></p>
-                                </div>                                                               
+                                </div>
                                 <div className={!validationData.company_name ? `${styles.field} ${styles.field_error}` : `${styles.field}`}>
                                     <input className={styles.field__input} type="text" placeholder="Firma" name='company_name' onChange={handleChange} />
-                                    <p className={styles.field__label}>Firma <small>(Firma adı boş bırakılamaz)</small></p>                                    
+                                    <p className={styles.field__label}>Firma <small>(Firma adı boş bırakılamaz)</small></p>
                                 </div>
                                 <div className={!validationData.phone_number ? `${styles.field} ${styles.field_error}` : `${styles.field}`}>
                                     <input className={styles.field__input} type="text" placeholder="Telefon Numaranız" name='phone_number' onChange={handleChange} />
                                     <p className={styles.field__label}>Telefon Numaranız <small>(Lütfen Telefon Numarası Giriniz)</small></p>
-                                </div>                                
+                                </div>
                                 <div className={!validationData.city_name ? `${styles.field_select} ${styles.field_select_error}` : `${styles.field_select}`}>
                                     <small>Lütfen Şehir Seçiniz</small>
                                     <Select options={cities} styles={customStyles} placeholder={'ŞEHİR'} onChange={handleChangeCity} />
                                 </div>
-                                <div className={!validationData.name_surname ? `${styles.field} ${styles.field_error}` : `${styles.field}`}>
-                                    <input className={styles.field__input} type="text" placeholder="Ürün Adı" name='product_name' onChange={handleChange} />
-                                    <p className={styles.field__label}>Ürün Adı <small>(Lütfen ürün adını giriniz)</small></p>
-                                </div>                                
+                                <div className={!validationData.commercial_system ? `${styles.field_select} ${styles.field_select_error}` : `${styles.field_select}`}>
+                                    <small>Lütfen ticari sistem bilgisini seçiniz</small>
+                                    <Select options={commercial_system} styles={customStyles} placeholder={'TİCARİ SİSTEM'} onChange={handleChangeCommercialSystem} />
+                                </div>
                                 <div className={styles.field}>
-                                    <input className={styles.field__input} type="text" placeholder="Mesajınız" name='message' onChange={handleChange} />
+                                    <input className={styles.field__input} type="text" placeholder="Varsa Ticari Sistem Adı" name='commercial_system_name' onChange={handleChange} />
+                                    <p className={styles.field__label}>Varsa Ticari Sistem Adı</p>
+                                </div>                                                                
+                                <div className={styles.field}>
+                                    <input className={styles.field__input} type="text" placeholder="Varsa Mesajınız" name='message' onChange={handleChange} />
                                     <p className={styles.field__label}>Mesajınız</p>
                                 </div>
 

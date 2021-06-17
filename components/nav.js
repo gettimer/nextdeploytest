@@ -239,7 +239,7 @@ export default function Nav() {
                         {openState === 2 ?
                             <ul>
                                 <li>
-                                    <Link href='/hizmetler/egitim/'><a>Eğitim Hizmetleri</a></Link>
+                                    <Link href='/hizmetler/egitim'><a>Eğitim Hizmetleri</a></Link>
                                 </li>
                                 <li>
                                     <Link href='/hizmetler/destek'><a>Destek Hizmetleri</a></Link>
@@ -249,6 +249,9 @@ export default function Nav() {
                                 </li>
                                 <li>
                                     <Link href='/hizmetler/ozel-yazilim'><a>Yazılım Hizmetleri</a></Link>
+                                </li>
+                                <li>
+                                <Link href='/hizmetler/proje-yonetimi'><a>Proje Yönetimi</a></Link>
                                 </li>
                             </ul>
                             : null}

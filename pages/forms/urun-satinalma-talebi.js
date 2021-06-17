@@ -72,14 +72,13 @@ const customStyles = {
     })
 };
 
-export default function UrunTanitimDemosu() {
+export default function UrunSatinalmaTalebi() {
     const [queryData, setQueryData] = useState({
         name_surname: '',
         email: '',
         company_name: '',
         phone_number: '',
         city_name: '',
-        product_name: '',
         message: ''
     });
 
@@ -89,7 +88,6 @@ export default function UrunTanitimDemosu() {
         company_name: true,
         phone_number: true,
         city_name: true,
-        product_name: true,
     });
     const [process, setProcess] = useState(false);
     const [refresh, setRefresh] = useState(0);
@@ -147,7 +145,7 @@ export default function UrunTanitimDemosu() {
             else if (key === 'phone_number') {
                 temp[key] = validatePhone(value)
             }
-            else if (key === 'name_surname' || key === 'company_name' || key === 'city_name' || key === 'product_name') {
+            else if (key === 'name_surname' || key === 'company_name' || key === 'city_name') {
                 temp[key] = validateTextField(value)
             }
         });
@@ -163,7 +161,7 @@ export default function UrunTanitimDemosu() {
 
     function send() {
         setProcess(true);
-        fetch('/api/contact?method=ProductDemo&data=' + JSON.stringify(queryData)).then(res => res.json()).then(data => {
+        fetch('/api/contact?method=ProductPurchase&data=' + JSON.stringify(queryData)).then(res => res.json()).then(data => {
             setProcess(false);
             if (data.Status === 'Success') {
                 toast.success('Mesajınız başarıyla gönderildi');
@@ -177,15 +175,15 @@ export default function UrunTanitimDemosu() {
     return (
         <Layout>
             <Head>
-                <title>Terapi Yazılım - Ürün Tanıtım Demosu</title>
+                <title>Terapi Yazılım - Ürün Satınalma Talebi</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div className={styles.subpage_header}>
                 <div className={styles.header_content}>
-                    <h1>Ürün Tanıtım Demosu</h1>
+                    <h1>Ürün Satınalma Talebi</h1>
                     <div className={styles.breadcrumb}>
                         <Link href='/'><a>anasayfa</a></Link>
-                        <Link href=''><a>ürün tanıtım demosu</a></Link>
+                        <Link href=''><a>ürün satınalma talebi</a></Link>
                     </div>
                 </div>
                 <img src='/img/contact.jpg' />
@@ -194,7 +192,7 @@ export default function UrunTanitimDemosu() {
                 <div className='container'>
                     <div className={styles.subpage_nav_container}>
                         <Link href='/iletisim'><a>İletişim</a></Link>
-                        <Link href=''><a className={styles.active}>Ürün Tanıtım Demosu</a></Link>
+                        <Link href=''><a className={styles.active}>Ürün Satınalma Talebi</a></Link>
                     </div>
                 </div>
             </div>
@@ -203,7 +201,7 @@ export default function UrunTanitimDemosu() {
                     <div className={styles.form_layout}>
                         <div className={styles.form_content}>
                             <div className={`${styles.contact_title} ${styles.contact_title_p0}`}>
-                                <h3>Ürün Tanıtım Demosu</h3>
+                                <h3>Ürün Satınalma Talebi</h3>
                             </div>
                             <p className={styles.form_desc}>
                                 Devir işlemleri en fazla 2 kez yapılabilecektir. (Kart veya rakam devri farketmeksizin) 3. veya daha sonraki devir talepleriniz ayrıca ücretlendirilecektir.
@@ -230,10 +228,6 @@ export default function UrunTanitimDemosu() {
                                     <small>Lütfen Şehir Seçiniz</small>
                                     <Select options={cities} styles={customStyles} placeholder={'ŞEHİR'} onChange={handleChangeCity} />
                                 </div>
-                                <div className={!validationData.name_surname ? `${styles.field} ${styles.field_error}` : `${styles.field}`}>
-                                    <input className={styles.field__input} type="text" placeholder="Ürün Adı" name='product_name' onChange={handleChange} />
-                                    <p className={styles.field__label}>Ürün Adı <small>(Lütfen ürün adını giriniz)</small></p>
-                                </div>                                
                                 <div className={styles.field}>
                                     <input className={styles.field__input} type="text" placeholder="Mesajınız" name='message' onChange={handleChange} />
                                     <p className={styles.field__label}>Mesajınız</p>
