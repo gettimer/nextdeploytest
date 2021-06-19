@@ -64,7 +64,7 @@ export default function Slider() {
                 <div className={styles.content_block}>
                     <div className='container'>
                         <div className={styles.generic}>
-                        KOBİ ve ERP Çözümleri ile <span>bütünleşik sunulan e-Çözümlerle tüm süreçlerinize değer katın.</span>
+                        KOBİ ve ERP Çözümleri ile bütünleşik sunulan <span>e-Çözümlerle tüm süreçlerinize değer katın.</span>
                         </div>
                         <Link href='/urun/e-fatura-10-1'>
                             <a className={styles.ghost_button}>Ürünleri İncele</a>
