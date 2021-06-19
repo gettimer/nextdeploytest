@@ -49,6 +49,19 @@ export default function Slider() {
                 <div className={styles.content_block}>
                     <div className='container'>
                         <div className={styles.generic}>
+                        KOBİ ve ERP Çözümleri <span>ile bütünleşik sunulan e-Çözümlerle tüm süreçlerinize değer katın.</span>
+                        </div>
+                        <Link href='/urun/logo-j-platform-4-1'>
+                            <a className={styles.ghost_button}>Ürünleri İncele</a>
+                        </Link>
+                    </div>
+                </div>
+                <img className={styles.slider_img} src='/img/slider/2.jpg' />
+            </div>            
+            {/* <div className={`keen-slider__slide ${styles.number_slide}`}>
+                <div className={styles.content_block}>
+                    <div className='container'>
+                        <div className={styles.generic}>
                             Büyük Düşünenler İçin <span>Güçlü Çözüm Ortağı</span>
                         </div>
                         <Link href='/urun/logo-j-platform-4-1'>
@@ -59,7 +72,7 @@ export default function Slider() {
                 <video className={styles.video} loop="true" autoplay="autoplay" muted>
                     <source src="/img/slider/vid.mp4" type="video/mp4" />
                 </video>
-            </div>
+            </div> */}
             <div className={`keen-slider__slide ${styles.number_slide}`}>
                 <div className={styles.content_block}>
                     <div className='container'>
