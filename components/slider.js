@@ -59,21 +59,6 @@ export default function Slider() {
                 <video className={styles.video} loop="true" autoplay="autoplay" muted>
                     <source src="/img/slider/video_1.mp4" type="video/mp4" />
                 </video>
-            </div>
-            <div className={`keen-slider__slide ${styles.number_slide}`}>
-                <div className={styles.content_block}>
-                    <div className='container'>
-                        <div className={styles.generic}>
-                            Büyük Düşünenler İçin <span>Güçlü Çözüm Ortağı</span>
-                        </div>
-                        <Link href='/urun/logo-j-platform-4-1'>
-                            <a className={styles.ghost_button}>Ürünleri İncele</a>
-                        </Link>
-                    </div>
-                </div>
-                <video className={styles.video} loop="true" autoplay="autoplay" muted>
-                    <source src="/img/slider/video_2.mp4" type="video/mp4" />
-                </video>
             </div>            
             <div className={`keen-slider__slide ${styles.number_slide}`}>
                 <div className={styles.content_block}>
