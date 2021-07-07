@@ -97,7 +97,7 @@ export default function Nav() {
                                 <a onClick={() => setSubMenuC(b => !b)} ><span>Çözümler</span></a>
                             </li>
                             <li><Link href='/referanslar'><a><span>Referanslar</span></a></Link></li>
-                            <li><Link href='/basari-hikayeleri'><a><span>Başarı Hikayeleri</span></a></Link></li>
+                            {/* <li><Link href='/basari-hikayeleri'><a><span>Başarı Hikayeleri</span></a></Link></li> */}
                             <li><Link href='/iletisim'><a><span>İletişim</span></a></Link></li >
                         </ul>
                     </nav>
@@ -305,9 +305,9 @@ export default function Nav() {
                     <li>
                         <Link href='/referanslar'><a>REFERANSLAR</a></Link>
                     </li>
-                    <li>
+                    {/* <li>
                         <Link href='/basari-hikayeleri'><a>BAŞARI HİKAYELERİ</a></Link>
-                    </li>
+                    </li> */}
                     <li>
                         <Link href='/iletisim'><a>İLETİŞİM</a></Link>
                     </li>

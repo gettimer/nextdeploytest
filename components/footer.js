@@ -18,7 +18,7 @@ export default function Footer() {
                             <Link href='/kurumsal/vizyon-misyon'><a>Vizyon Misyon</a></Link>
                             <Link href='/kurumsal/zaman-tuneli'><a>Zaman Tüneli</a></Link>
                             <Link href='/referanslar'><a>Referanslar</a></Link>
-                            <Link href='/basari-hikayeleri'><a>Başarı Hikayeleri</a></Link>
+                            {/* <Link href='/basari-hikayeleri'><a>Başarı Hikayeleri</a></Link> */}
                         </div>
                         <div>
                             <Link href='/hizmetler/egitim'><a>Eğitim Hizmetleri</a></Link>

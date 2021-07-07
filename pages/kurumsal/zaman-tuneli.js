@@ -109,7 +109,7 @@ export default function Hakkimizda() {
                                     </section>
                                     <section>
                                         <ul>
-                                            <li><strong>48 proje başarılı şekilde tamamlandık ve teslim ettik.</strong></li>
+                                            <li><strong>48 projeyi başarılı şekilde tamamladık ve teslim ettik.</strong></li>
                                         </ul>
                                     </section>
                                     <section>
@@ -128,7 +128,7 @@ export default function Hakkimizda() {
                                     </section>
                                     <section>
                                         <ul>
-                                            <li><strong>Masaüstü uygulamalarına ilave mobil ve web platformunda çözümler geliştirme başladık.</strong></li>
+                                            <li><strong>Masaüstü uygulamalarına ilave mobil ve web platformunda çözümler geliştirmeye başladık.</strong></li>
                                         </ul>
                                     </section>
                                     <section>
@@ -152,7 +152,7 @@ export default function Hakkimizda() {
                                     </section>
                                     <section>
                                         <ul>
-                                            <li><strong>5 yılda 100 e yakın proje başarılı şekilde tamamladık.</strong></li>
+                                            <li><strong>5 yılda 100 e yakın projeyi başarılı şekilde tamamladık.</strong></li>
                                         </ul>
                                     </section>
                                     <section>
