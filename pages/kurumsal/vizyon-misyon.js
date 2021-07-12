@@ -45,7 +45,7 @@ export default function Hakkimizda() {
                         <p>İş ortaklarımıza, rekabet çerçevesi doğrultusunda iş, zaman, ürün, teknoloji ve implementasyon konularında çağdaş yönetim ilkelerine uygun biçimde eksiksiz tam bir çözüm sağlayıcı olmak.</p>
                     </div>
                     <div className={styles.media}>
-                        <img src='/img/about.jpg' />
+                        <img src='/img/vision.jpg' />
                     </div>
                 </div>
 

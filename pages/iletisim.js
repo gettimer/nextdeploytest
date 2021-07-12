@@ -109,8 +109,8 @@ export default function Iletisim() {
                                     <span className={`${styles.title} ${styles.title_top}`}>
                                         E-POSTA
                                 </span>
-                                    <a href="mailto:info@terapiyazilim.com">
-                                        yazilim@terapiyazilim.com
+                                    <a href="mailto:destek@terapiyazilim.com">
+                                    destek@terapiyazilim.com
                                 </a>
                                 </div>
                             </div>
