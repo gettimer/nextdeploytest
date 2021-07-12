@@ -69,7 +69,7 @@ export default function Footer() {
                     <div className={styles.contact_links}>
                         <ContactButtons />
                     </div>
-                    <Link href='mailto:info@terapiyazilim.com'><a className={styles.email}>info@terapiyazilim.com</a></Link>
+                    <Link href='mailto:destek@terapiyazilim.com'><a className={styles.email}>destek@terapiyazilim.com</a></Link>
                 </div>
             </div>
         </div>
