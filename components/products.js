@@ -21,7 +21,7 @@ export default function Products() {
                         </div>
                         <div className={styles.content}>
                             <h3>Hizmetler</h3>
-                            <p>Hızlı ve kalıcı çözümlerle iş ortaklarımızın yanında olmaya devam etmekteyiz.</p>
+                            <p>Destek ve danışmanlık hizmetlerimizle iş ortaklarımızın gelişimine katkı sağlıyoruz.</p>
                             <ul>
                                 <li>
                                     <Link href='/hizmetler/egitim'><a>EĞİTİM</a></Link>
@@ -43,7 +43,7 @@ export default function Products() {
                         </div>
                         <div className={styles.content}>
                             <h3>Ürünler</h3>
-                            <p>Hızlı ve kalıcı çözümlerle iş ortaklarımızın yanında olmaya devam etmekteyiz.</p>
+                            <p>İş ortaklarımızın, en uygun yazılımı bulmalarına yardımcı oluyoruz.</p>
                             <ul>
                                 <li>
                                     <Link href='/urun/logo-isbasi-1-2'><a>KOBI</a></Link>
