@@ -78,7 +78,7 @@ export default function Nav() {
             <div className={styles.nav_wrapper}>
                 <Link href='/'>
                     <a className={styles.nav_logo}>
-                        <img src="/img/terapinavlogo.svg" alt="Terapi Yazılım" />
+                        <img src="/img/logo2.png" alt="Terapi Yazılım" />
                     </a>
                 </Link>
                 {!isMobile ?
