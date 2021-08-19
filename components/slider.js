@@ -57,7 +57,7 @@ export default function Slider() {
                     </div>
                 </div>
                 <video className={styles.video} loop="true" autoplay="autoplay" muted>
-                    <source src="/img/slider/video_1.mp4" type="video/mp4" />
+                    <source src="/img/slider/vid.mp4" type="video/mp4" />
                 </video>
             </div>            
             {/* <div className={`keen-slider__slide ${styles.number_slide}`}>
